@@ -1,0 +1,38 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Window Location Object </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY>
+<H2><CENTER>Window Location Object</CENTER></H2>
+Window.location object can be written without the windows prefix
+<PRE>
+Properties of the location Object 
+1. href        //returns the href(url) of the current page 
+2. hostname    //returns the domain name of the web host
+3. pathname    // returns the path and filename of the current page
+4. protocol    //returns the web protocol used (http:// or https://)
+5. assign      //loads a new document
+</PRE>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function newDoc(){
+ window.location.assign("/practiceproject/")
+}
+document.write("<b>Page location is </b>: "+location.href+"<BR/>");
+document.write("<b>Page Hostname is </b>: "+location.hostname+"<BR/>");
+document.write("<b>Page Pathname is </b>: "+location.pathname+"<BR/>");
+document.write("<b>Page Protocol is </b>: "+location.protocol+"<BR/>");
+document.write("<b>Page Assign is </b>: "+"<INPUT TYPE='BUTTON' VALUE='LOAD NEW DOCUMENT(INDEX PAGE)' ONCLICK='newDoc()'>");
+
+//-->
+</SCRIPT>
+</BODY>
+</HTML>

@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> WINDOW METHODS </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var st,si;
+function myalert(){
+alert("Hello ashish i am in Alert function");
+}
+function myprompt(){
+var m=prompt("Hello ashish i am in Prompt function");
+alert("your input is : "+m);
+}
+
+function myconfirm(){
+var m=confirm("Hello ashish i am in confirm function");
+if(m==true)
+	alert("your input is ok ");
+else
+	alert("your input is cancel ");
+}
+
+function mypopup(){
+MyWindow=window.open("/Practiceproject/JavascriptPractice.php");//FOR OPEN IN SAME BROWSER TAB
+//MyWindow=window.open("/Practiceproject/JavascriptPractice.php","POPUP","toolbar=no,width=500,height=500");//FOR OPEN IN DIFFERENT BROWSER WINDOW
+//NOTE YOU HAVE TO CREATE object reference  "MyWindow" OR ANY NAME FOR THE OBJECT IF YOU WANT TO CLOSE THAT SAME WINDOW 
+//HERE OPEN METHOD RETURNS OBJECT WHICH YOU HAVE TO STORE BY A NAME HERE WE GAVE A NAME "MyWindow"
+
+}
+function redirectfn(){
+alert("i m clicked");
+//window.location("redirectedpage.html");wrong format ..This doesn't work
+window.location="redirectedpage.html";//This we cant see it 
+window.location="/Practiceproject/JavascriptPractice.php";//This is final result
+}
+
+function myclosepopup(){
+MyWindow.close();
+}
+
+function mysetinterval(){
+si=setInterval("alert('interval started')",3000);
+}
+
+function myclearinterval(){
+clearInterval(si);
+alert('interval ended')
+}
+
+function mysettimeout(){
+st = setTimeout("alert('i m in alert box in settimeout function')",3000);
+}
+
+function mycleartimeout(){
+clearTimeout(st);
+alert("TIMER STOPPED..ENJOY");
+}
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+There are various Builtin WINDOW METHODS or functions which you can use here are some of them
+<OL>
+	<LI>ALERT</LI>
+	<LI>PROMPT</LI>
+	<LI>CONFIRM</LI>
+	<LI>PRINT</LI>
+	<LI>LOCATION</LI>
+	<LI>OPEN (POPUP)</LI>
+	
+	<LI>CLOSE</LI>
+	<LI>CLEAR INTERVAL</LI>
+	<LI>CLEAR TIMEOUT</LI>
+	<LI>SET INTERVAL</LI>
+	<LI>SET TIMEOUT</LI>
+</OL>
+
+<PRE>
+i will create an event when a button is clicked which is a click event
+
+<INPUT TYPE="button" onclick="myalert()" value="ALERT">
+<INPUT TYPE="button" onclick="myprompt()" value="PROMPT">
+<INPUT TYPE="button" onclick="myconfirm()" value="CONFIRM">
+<INPUT TYPE="button" onclick="window.print()" value="PRINT">
+<INPUT TYPE="button" onclick="redirectfn()" value="LOCATION (for Redirect)">
+
+<INPUT TYPE="button" onclick="mypopup()" value="OPEN (for Popup)">
+<INPUT TYPE="button" onclick="myclosepopup()" value="CLOSE">
+
+<INPUT TYPE="button" onclick="mysetinterval()" value="SET INTERVAL">Executed after fixed interval until stopped
+<INPUT TYPE="button" onclick="myclearinterval()" value="CLEAR INTERVAL">STOP INTERVAL
+
+<INPUT TYPE="button" onclick="mysettimeout()" value="SET TIMEOUT">
+<INPUT TYPE="button" onclick="mycleartimeout()" value="CLEAR TIMEOUT">
+
+
+
+
+
+</PRE>
+</BODY>
+</HTML>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="http://localhost/myprep/" target="_blank">
+  <!--<base href="http://www.w3schools.com/images/" target="_blank">-->
+  <link rel="stylesheet" type="text/css" href="mycss.css">
+  <script type="text/javascript">
+      function prompt(){
+        prompt("hi");
+      }
+
+        var canvas = document.getElementById("canvas");
+        var ctx = canvas.getContext("2d");
+        ctx.fillStyle = "green";
+        ctx.fillRect(10, 10, 100, 100);
+
+  </script>
+</head>
+
+<body>
+<div class="container">
+    <div id="h">
+             <div><h1>LEARNING HTML</h1></div>
+             <div class="mb"> <a href="index.html">HOME</a></div>
+             <div class="mb"> <a href="HTML/html.html">LEARN HTML</a></div>
+             <div class="mb"> <a href="CSS/css.html">LEARN CSS</a></div>
+             <div class="mb"> <a href="JAVASCRIPT/javascript.html">LEARN JAVASCRIPT</a></div>
+    </div>
+    <div id="s">
+      <h5>What HTML is</h5>
+      <p>
+       It uses a special syntax containing markers (called “elements”) which are wrapped around the text within the document to indicate how user agents (eg. web browsers) should interpret that portion of the document.<br/>
+
+      A user agent is any software that is used to access web pages on behalf of users. all types of desktop browser software are user agents, but not all user agents are browser software. The automated programs that Google and Yahoo! use to index the web to use in their search engines are also user agents, but no human being is controlling them directly.
+      </p>
+
+
+      <h5>HTML Block Elements and Inline Elements</h5>
+      <pre>
+    Hello , I am using pre tag
+can you see the spaces tabs and new line
+      </pre>
+
+Contents :
+Strutural Elements
+<blockquote>
+  hello i am written in block quote .
+</blockquote>
+<hr>
+i am a text after hr tag.this applies to html but not xhtml
+<hr/>
+i am a text after hr/ tag applies to both html and xhtml
+<br/>
+See below is an example of area Element and iframe<br/>
+<img src="HTML/planets.gif" width="145" height="126" alt="Planets" usemap="#planetmap">
+<h2>see your clicked image here :</h2>
+<iframe src="HTML/empty.jpg" name="fr" width="150" height="150">df</iframe>
+<map name="planetmap" >
+  <area shape="rect" coords="0,0,82,126" alt="Sun" href="HTML/sun.gif" title="Sun here" target="fr" accesskey="s">
+  <area shape="circle" coords="90,58,3" alt="Mercury" href="HTML/merglobe.gif" title="Mercury here" target="fr" accesskey="m">
+  <area shape="circle" coords="124,58,8" alt="Venus" href="HTML/venglobe.gif" title="Venus here" target="fr" accesskey="v">
+  <area shape="rect" coords="0,0,145,126" alt="This box" title="box here" href="HTML/box.jpg" target="fr">
+</map>
+<br/>
+Use alt+shift+s to go to sun image inside area<br/>
+Use alt+shift+v to go to venus image inside area<br/>
+Use alt+shift+m to go to mars image inside area<br/>
+
+lets try using an object element to use flash object
+<object data="Car-speakers-590x90.swf" type="application/x-shockwave-flash" width="400" height="400">
+    <param name="Car-speakers-590x90" value="Car-speakers-590x90.swf">
+    <p>See the speaker.</p>
+</object>
+
+<object codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,29,0"
+  data="Car-speakers-590x90.swf"
+  width="200" height="200"></object>
+
+  <p>To indicate a reference to a printed work, you'd use
+    the <code>cite</code> attribute as follows: <code>&lt;p&gt;My
+    favorite book is &lt;cite&gt;The Two
+    Towers&lt;/cite&gt;&lt;/p&gt;</code>.</p>
+
+    <address>Brought to you by the Editorial and News Team:<br/>
+  <a href="mailto:news@example.org">Email the news team</a><br/>
+  Mail us at PO Box 123, Citysville<br/>
+  Tel +1 212 3131
+</address>
+<p><strike>The guy is a fool.</strike> The guy is an absolute
+genius. What was I thinking?</p>
+
+
+<i>
+   foo
+   <div>bar</div>
+   baz
+</i>
+<br/>
+<var>
+   foo
+   <div>bar</div>
+   baz
+</var>
+<br/>
+Here’s an example in which the word “Canoe” is reversed:
+<br/>
+<p>A palindrome is a word, like 'kayak,' that appears
+    exactly the same when all the letters are reversed.
+    <bdo dir="rtl">Canoe</bdo>, it seems, is not a
+    palindrome.</p>
+<br/>
+    Here’s an example of the big element in use. The tags are nested to show the incremental increase of the text’s size:
+<br/>
+<p>It's <big>bigger, <big>better, and now with <big>20% more
+     beetroot goodness!</big></big></big></p>
+<br/>
+<p>Bernie enjoyed nothing more than a <del
+    datetime="2007-11-05T23:31:05Z">night out on the town at his
+    favorite drag queen show</del> <ins
+    datetime="2007-11-05T23:33:32Z">quiet night in with a warm cup of
+    cocoa.</ins></p>
+    <br/>
+    A support site that provides instructions to help Windows users to unfreeze an application might include the following HTML:
+
+<p>Hold down <kbd>CTRL</kbd>, <kbd>ALT</kbd>, and <kbd>DELETE</kbd>,
+    then select Task Manager</p>
+    <br/><br/>
+Consider this example usage of rp:
+
+<ruby>
+ <rb>家辺 勝文</rb>
+ <rt><rp>(</rp>liaison<rp>)</rp></rt>
+</ruby>
+
+<xmp>
+Stock ID    Description             Price         Quantity in Stock
+--------    -----------             -----         -----------------
+116         Inflatable Armchair     21.50                13
+119         Walkie Talkie           40.20                44
+</xmp>
+
+<form method="get" action="https://www.google.com/search" >
+<input type="text" name="q" size="31" value="">
+<input type="submit">
+</form>
+
+<p><img src="stickman.jpg" width="100" height="100" alt="Stickman"> - Notice that we have only specified a relative address for the image. Since we have specified a base URL in the head section, the browser will look for the image at "http://www.w3schools.com/images/stickman.gif".</p>
+<p><img src="stickman.jpg" alt="Stickman"> - Notice that we have only specified a relative address for the image. Since we have specified a base URL in the head section, the browser will look for the image at "http://www.w3schools.com/images/stickman.gif".</p>
+
+<p><a href="http://www.w3schools.com">W3Schools</a> - Notice that the link opens in a new window, even if it has no target="_blank" attribute. This is because the target attribute of the base element is set to "_blank".</p>
+<ol  type="a" start="c">
+  <li>Remove the outer casing by pushing the plastic rivets
+      through.</li>
+  <li>Disconnect the main power harness from the inner unit
+      (unclip).</li>
+  <li>Remove connection to the glow plug.</li>
+  <li>Extract unit, keeping upright at all times.</li>
+</ol>
+
+<ol  type="I" start="3">
+  <li>Remove the outer casing by pushing the plastic rivets
+      through.</li>
+  <li>Disconnect the main power harness from the inner unit
+      (unclip).</li>
+  <li>Remove connection to the glow plug.</li>
+  <li>Extract unit, keeping upright at all times.</li>
+</ol>
+<p>I had done a seminar on <abbr title="Search Engine Optimization">SEO</abbr>> </p>
+<p>I like to work on <abbr>SEO</abbr></p>
+
+<p>Bernie enjoyed nothing more than a <del
+    cite="http://berniesworld.com/drag.html"
+    datetime="2007-11-05T23:31:05Z">night out on the town at his
+    favorite drag queen show</del> <ins
+    cite="http://berniesworld.com/drag.html"
+    datetime="2007-11-05T23:33:32Z">quiet night in with a warm cup of
+    cocoa</ins>
+</p>
+
+<p>
+  <dfn>The force</dfn> is an energy-field, created
+  by all living things. It surrounds us, penetrates
+  us, it binds the galaxy together.
+</p>
+
+<p>
+  <dfn>The forks</dfn> are the multi-pronged
+  instruments you use to eat your dinner with,
+  usually made from stainless steel.
+</p>
+
+In this example, a support site provides an explanation of a 404 error:
+<p>If the browser spits out an error message such as
+    <samp>HTTP 404 - File not found</samp>,
+    you may simply have typed the address incorrectly.</p>
+
+   Lets design a registeration form
+   <form>
+   <fieldset >
+   <legend>Personal Details</legend>
+     Enter UserName : <input type="text" value="" name="name"  /><br/>
+     Enter Password : &nbsp; <input type="password" value="" name="password"><br/>
+     <button type="button" accesskey="b" disabled="disabled" >
+        <img src="HTML/merglobe.gif" height="20" width="100" alt="mercury button"/>PRESS ME
+     </button><br/>
+     </fieldset>
+     <input type="text" name="town" id="town" readonly="readonly"
+      value="Southampton"/>
+      <select name="starters">
+  <option value="soup">Soup of the day</option>
+  <option value="mushrooms">Garlic mushrooms
+  <optgroup label="asd">
+    <option value="salmon">Smoked salmon</option>
+    <option value="cocktail">Seafood cocktail</option>
+    <option value="oysters">Fresh oysters</option>
+  </optgroup></option>
+</select>
+
+ <label for="favoritefood">Favorite food</label>
+  <select name="favoritefood" id="favoritefood">
+    <option>Cheese</option>
+    <option>Egg</option>
+    <option>Cabbage</option>
+   </form>
+<br/><br/>
+<canvas id="canvas"></canvas><br/><br/>
+<div>Choose a browser from this list:</div>
+<input list="browsers" />
+<datalist id="browsers">
+  <option value="Chrome">
+  <option value="Firefox">
+  <option value="Internet Explorer">
+  <option value="Opera">
+  <option value="Safari">
+</datalist>
+<br/><br/>
+<progress value="70" max="100">70 %</progress>
+<br/><br/>
+<video controls>
+   <source src="sample.ogv" type="video/ogv">
+   <track kind="captions" src="sampleCaptions.srt" srclang="en">
+   <track kind="descriptions" src="sampleDesciptions.srt" srclang="en">
+   <track kind="chapters" src="sampleChapters.srt" srclang="en">
+   <track kind="subtitles" src="sampleSubtitles_de.srt" srclang="de">
+   <track kind="subtitles" src="sampleSubtitles_en.srt" srclang="en">
+   <track kind="subtitles" src="sampleSubtitles_ja.srt" srclang="ja">
+   <track kind="subtitles" src="sampleSubtitles_oz.srt" srclang="oz">
+   <track kind="metadata" src="keyStage1.srt" srclang="en" label="Key Stage 1">
+   <track kind="metadata" src="keyStage2.srt" srclang="en" label="Key Stage 2">
+   <track kind="metadata" src="keyStage3.srt" srclang="en" label="Key Stage 3">
+</video>
+<br/><br/>
+<article>
+  <p>
+    The Disney movie <em>The Little Mermaid</em> was
+    first released to theatres in 1989.
+  </p>
+  <aside>
+    The movie earned $87 million during its initial release.
+  </aside>
+  <p>
+    More info about the movie...
+  </p>
+</article>
+<br/><br/>
+<figure>
+  <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+</figure>
+<p></p>
+<!-- Figure with figcaption -->
+<figure>
+  <img src="https://developer.cdn.mozilla.net/media/img/mdn-logo-sm.png" alt="An awesome picture">
+  <figcaption>Caption for the awesome picture</figcaption>
+</figure>
+<p></p>
+
+<main>
+  <h1>Apples</h1>
+  <p>The apple is the pomaceous fruit of the apple tree.</p>
+
+  <article>
+    <h2>Red Delicious</h2>
+    <p>These bright red apples are the most common found in many
+    supermarkets.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
+
+  <article>
+    <h2>Granny Smith</h2>
+    <p>These juicy, green apples make a great filling for
+    apple pies.</p>
+    <p>... </p>
+    <p>... </p>
+  </article>
+
+</main>
+<br/><br/>
+<ruby>
+  漢 <rp>(</rp><rt>Kan</rt><rp>)</rp>
+  字 <rp>(</rp><rt>ji</rt><rp>)</rp>
+</ruby>
+<br/><br/>
+<table>
+  <tr>
+    <td>John</td>
+    <td>Doe</td>
+  </tr>
+  <tr>
+    <td>Jane</td>
+    <td>Doe</td>
+  </tr>
+  <tfoot>
+  <tr><td>fvgsd</td><td>footer</td></tr></tfoot>
+</table>
+<br/><br/>
+ </div>
+ <div id="f">this is footer</div>
+</div>
+</body>
+</html>

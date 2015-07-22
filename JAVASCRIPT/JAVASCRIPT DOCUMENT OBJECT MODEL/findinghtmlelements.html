@@ -1,0 +1,136 @@
+<h3>Finding HTML Elements</h3>
+	  <p>Following are some waya:</p>
+	  <ul>
+	  	<li>Finding HTML elements by id</li>
+	  	<li>Finding HTML elements by tag name</li>
+	  	<li>Finding HTML elements by class name</li>
+	  	<li>Finding HTML elements by CSS selectors</li>
+	  	<li>Finding HTML elements by HTML object collections</li>
+	  </ul>
+	  
+	  ------------------------------------
+
+	  <h3>Finding html elements by id</h3>
+	  <dl>
+	  	<dt>
+	  		<strong>
+	  			document.getElementById()
+	  		</strong>
+	  	</dt>
+	  	<dd>
+	  		This is used to get elements by using id attribute associated with it
+	  	</dd>
+	  </dl>	     
+	  ------------------------------------  <br/>
+	  
+	  <span id="demo-getelementbyid">
+	  </span>
+	  <script type="text/javascript">
+	  	var x=document.getElementById("demo-getelementbyid");
+	  	x.innerHTML="Used document.getElementById()";
+	  </script>
+	  <br/>
+
+	  ------------------------------------
+
+	  <h3>Finding html elements by TagName</h3>
+	  <dl>
+  		<dt>
+  			<em>
+  				document.getElementsByTagName()
+  			</em>
+  	  </dt>
+  	  <dd>
+  	  	This is used to get elements by using tags associated with it.
+    		We get an array of values for all tags..which we have to access using index
+  	  </dd>
+  	</dl> 	  
+
+	  <h5></h5>
+	  <h5></h5>
+	  <script type="text/javascript">
+	  	var x=document.getElementsByTagName("h5");
+	  	x[0].innerHTML="Used getElementsByTagName() using index 0";
+	  	x[1].innerHTML="Used getElementsByTagName() using index 1";
+	  </script>
+	--------------------------------------
+	<h3>Finding Elements by Class Name</h3>
+	<dl>
+		<dt>
+			<strong>
+				document.getElementByClassName
+			</strong>
+		</dt>
+		<dd>
+			If you want to find all HTML elements with the same class name, use getElementsByClassName().
+		</dd>
+	</dl>
+
+	<p class="names"></p>
+	<p class="names"></p>
+
+<script>
+var x = document.getElementsByClassName("names");
+x[0].innerHTML = 
+"ashish gaikwad";
+x[1].innerHTML = "karuna gaikwad";
+</script>
+---------------------------------
+<h3>Finding Elements by CSS Selectors</h3>
+	<dl>
+		<dt>
+			<strong>
+				document.querySelectorAll()
+			</strong>
+		</dt>
+		<dd>
+			If you want to find all HTML elements that matches a specified CSS selector (id, class names, types, attributes, values of attributes, etc), use the querySelectorAll() method.
+		</dd>
+	</dl>
+
+	<p>I am not changed</p>
+	<div class="f">
+		<p>I am not changed</p>
+	</div>
+	
+
+	<script>
+	var x = document.querySelectorAll("div.f>p");
+	x[0].innerHTML = 
+	"Only i am changed by document.querySelectorAll(selectors)";
+	</script>
+---------------------------------------
+	<h3>Finding Elements by HTML Object Collections</h3>
+		<pre>
+			The following HTML objects (and object collections) are also accessible:
+
+			document.forms
+			document.anchors
+			document.body
+			document.documentElement
+			document.embeds		
+			document.head
+			document.images
+			document.links
+			document.scripts
+			document.title
+		</pre>
+		
+		<form id="form1" action="login.php" method="POST">
+			UserName:<input type="text" name="uname" value="ashish"><br>
+			Password:<input type="password" name="upass" value="gaikwad"><br>
+			<input type="submit" name="mysubmit" value="submit">
+		</form>
+
+		<p id="demo"></p>
+		<script>
+			var b=document.forms["form1"];
+			
+			var i;
+    for (i = 0; i < b.length ;i++) {
+        
+        document.write(b.elements[i].name+" : "+b.elements[i].value + "<br>");
+        
+    }
+    document.getElementById("demo").innerHTML = text;
+		</script><br/>

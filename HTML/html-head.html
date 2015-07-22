@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML HEAD ELEMENTS</title>
+  <style type="text/css">
+    body {
+      background-color: black;
+      color: yellow;
+    }
+  </style>
+</head>
+<body>
+  <h2>HTML HEAD ELEMENTS</h2>
+  <p>Following are head elements</p>
+  <ol>
+    <li><a href="#title">title</a></li>
+    <li><a href="#base">base</a></li>
+    <li><a href="#link">link</a></li>
+    <li><a href="#meta">meta</a></li>
+    <li><a href="#object">basefont(DEPRECATED)</a></li>
+    <li><a href="#script">script</a></li>
+    <li><a href="#style">style</a></li>
+  </ol>
+
+  <div id="base">
+    <p>base:</p>
+    <p>The base element, which is contained in the head of the document, provides a method for defining the base URL for all links and form submissions on a page. It also provides a common target (in the form of a named window) for all of these links or form submissions.</p>
+    <p>It has two attributes:</p>
+    <ol>
+      <li>href: specifies the base URL for all relative URLs in the document</li>
+      <li>target: specifies the default target window in which to display content from links in the current document</li>
+    </ol>
+  </div>
+
+  <div id="link">
+    <p>link:</p>
+    <p>The link element is used to create links between the referencing document and an external resource</p>
+    <p>It has following attributes:</p>
+    <ol>
+      <li>charset : The charset attribute is intended to identify the character set used in the document that’s referenced within the link element.</li>
+      <li>href : The href defines the location of the resource</li>
+      <li>media : If your page is to be viewed on a variety of media, you may want to apply to it a number of separate styles that are specific to each medium.These subtle changes are made possible by the media attribute.Example : This example shows the application of two different styles for two different media:
+        <link rel="stylesheet" href="basic.css" media="screen"/>
+        <link rel="stylesheet" href="print.css" media="print"/>
+        <link rel="stylesheet" href="basic.css" media="screen, projection"/>
+        <link rel="stylesheet" href="print.css" media="print"/>
+      </li>
+      <li>rel : The rel attribute defines the relationship that the linked resource has to the document from which it’s referenced</li>
+      <li>rev : NOT SUPPORTED IN ANY BROWSERS.It defines the relationship that the referenced document would classify itself as having with this document.
+      Not supported in any browsers. 
+      </li>
+      <li>target : NOT SUPPORTED IN ANY BROWSERS.The target attribute is used in the link element to identify the window or frame—which may be in a frameset, an iframe, or even a popup window with a custom window name—that the resource referenced in the href attribute applies to.</li>
+      <li>type : NOT TO BE USED IN HTML 5. type is an optional attribute of the link element, that is used to identify the MIME type of the linked resource.
+      <link rel="stylesheet" type="text/css" href="global.css"/>
+    </li>
+    </ol>
+  </div>
+
+  <div id="meta">
+    <p>meta : </p>
+    <p>The meta element provides information about the following document content; that information may be used by the user agent (that is, the browser) to decide how to render content, or it may be meta information that’s provided for indexing purposes</p>
+    <ol>
+      <li>content : content is a required attribute. It’s this part of the meta element that contains the actual meta information, which is defined by the name attribute
+      <meta name="categories" content="work, projects, current"/>
+      </li>
+      <li>http-equiv: You can apply many settings to a web server in the form of HTTP response headers—information that’s sent back with the response to any request made for a resource on that server. However, not everyone has direct access to their web site’s server configuration options; if this is the case, you can use the meta element to simulate an HTTP response header
+      <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+      </li>
+      <li>name : he name attribute is the counterpart to the content attribute, and simply provides a name for the information included in the content attribute. If the name attribute is present, the http-equiv attribute shouldn’t be used.
+      Example:
+      This name attribute identifies the content as "categories":
+      <meta name="categories" content="work, projects, current"/></li>
+      <li>charset: NEWLY ADDED IN HTML5.</li>
+    </ol>
+  </div>
+
+</body>
+</html>

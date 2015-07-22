@@ -1,0 +1,40 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var currentTime = new Date();
+var month=currentTime.getMonth()+1; // 1 has to be added
+var day=currentTime.getDate();  //getDay displays day of the week while getDate displays days of the month
+var year=currentTime.getFullYear();//
+var hours=currentTime.getHours();
+var minutes=currentTime.getMinutes();
+var seconds=currentTime.getSeconds();
+
+document.write("<H2>WELCOME TO DATE OBJECT </H2>");
+document.write(day+"/"+month+"/"+year)
+if(minutes<10)
+{
+minutes=minutes+10;
+}
+document.write("<BR>"+hours+":"+minutes+":"+seconds);
+
+if(hours>11)
+   document.write("PM");
+else
+	document.write("AM");
+
+document.write("<BR>total timestamp = "+Date());
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+</BODY>
+</HTML>

@@ -1,0 +1,75 @@
+<html>
+<head>
+<title>SIZE METHOD</title>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="ashish">
+<META NAME="Keywords" CONTENT="size">
+<META NAME="Description" CONTENT="window">
+</head>
+<body>
+<H2><CENTER>Window Size</CENTER></H2>
+<PRE>
+Three different properties can be used to determine the size of the browser window
+1. window.innerHeight / window.innerWidth                                           // for IE/Chrome/safari/Opera
+2. document.documentElement.clientHeight / document.documentElement.clientWidth     // for IE 8,7,6,5
+3. document.body.clientHeight / document.body.clientWidth							// for IE 8,7,6,5
+
+Note: Values will differ for different browsers
+
+A PRACTICAL JAVASCRIPT SOLUTION COVERING ALL BROWSERS
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var h;
+h=window.innerHeight                      //doesnt work for ie ..work for for Chrome/safari/Opera
+h=document.documentElement.clientHeight   //doesnt work good for ie/mozilla
+h=document.body.clientHeight
+
+var w;
+w=window.innerWidth
+w=document.documentElement.clientWidth
+w=document.body.clientWidth
+
+
+
+document.write("width is = "+w);
+document.write("<br>height is = "+h);
+
+
+//-->
+</SCRIPT>
+
+ANOTHER KIND OF BEST SOLUTION TO THIS PROBLEM  (MY SOLUTION)
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+var ht,wt;
+if(window.innerHeight && window.innerWidth)
+{
+	ht=window.innerHeight
+	wt=window.innerWidth
+    
+ }
+ else if(document.documentElement.clientHeight && document.documentElement.clientWidth)
+ {	
+	ht=document.documentElement.clientHeight
+	wt=document.documentElement.clientWidth
+	
+ }
+ else if(document.body.clientHeight && document.body.clientWidth)
+ {	
+	ht=document.body.clientHeight
+	wt=document.body.clientWidth
+	
+ }
+
+ document.write("width is = "+wt+"<br>height is = "+ht);
+//-->
+</SCRIPT>
+
+
+
+</PRE>
+
+
+
+</body>
+</html>

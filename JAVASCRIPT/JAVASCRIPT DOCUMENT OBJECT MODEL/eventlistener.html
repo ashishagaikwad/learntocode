@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  	<meta charset="utf-8">
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<title>Event Listener</title>
+  	<link rel="stylesheet" href="">
+  </head>
+  <body>
+  	<h1>Javascript HTML DOM Event Listener</h1>
+  	<p>Topics covered here are</p>
+  	<ol>
+  		<li>The addEventListener() method</li>
+  		<li>Add an Event Handler to an Element</li>
+  		<li>Add Many Event Handlers to the Same Element</li>
+  		<li>Add an Event Handler to the Window Object</li>
+  		<li>Passing Parameters</li>
+  		<li>Event Bubbling or Event Capturing?</li>
+  		<li>The removeEventListener() method</li>
+  		<li>Browser Support</li>
+  	</ol>
+
+  	<h2>The addEventListener() method</h2>
+  	<h3>Description:</h3>
+  	<ul>
+  		<li>
+  			The addEventListener() method attaches an event handler to the specified element.
+  		</li>
+  		<li>
+  			The addEventListener() method attaches an event handler to an element without overwriting existing event handlers.
+  		</li>
+  		<li>
+  			You can add many event handlers to one element.
+  		</li>
+  		<li>
+  			You can add many event handlers of the same type to one element, i.e two "click" events.
+  		</li>
+  		<li>
+  			You can add event listeners to any DOM object not only HTML elements. i.e the window object.
+  		</li>
+  		<li>
+  			The addEventListener() method makes it easier to control how the event reacts to bubbling.
+  		</li>
+  		<li>
+  			When using the addEventListener() method, the JavaScript is separated from the HTML markup, for better readability and allows you to add event listeners even when you do not control the HTML markup.
+  		</li>
+  		<li>
+  			You can easily remove an event listener by using the removeEventListener() method.
+  		</li>		
+  	</ul>
+  	<h3>Syntax</h3>
+  	<p style="background-color:lightgray;padding:5px;">
+  		element.addEventListener(event, function, useCapture);
+  	</p>
+  	<ul>
+  		<li>
+  			The first parameter is the type of the event (like "click" or "mousedown").
+  		</li>
+  		<li>
+  			The second parameter is the function we want to call when the event occurs.
+  		</li>
+  		<li>
+  			The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+  		</li>
+  		<li>
+  			<strong>Note:</strong>	Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".
+  		</li>		
+  	</ul>
+  	<h3>Example</h3>
+
+  	<button id="eventlistener">Display Date</button>
+  	<p id="mydate">You will get your Date here</p>
+  	<script>
+
+  		document.getElementById('eventlistener').addEventListener("click",displayDate);
+
+  		function displayDate () {
+  			document.getElementById('mydate').innerHTML=Date();
+  		}
+  	</script>
+  	<h2>Add an Event Handler to an Element</h2>
+  	<h3>Description:</h3>
+  	<ul>
+  		<li>
+  			An event handler executes a segment of a code based on certain events occurring within the application, such as onLoad, onClick.
+  		</li>
+  		<li>
+  			JavaScript event handers can be divided into two parts: interactive event handlers and non-interactive event handlers.
+  		</li>
+  		<li>
+  			An interactive event handler is the one that depends on the user interactivity with the form or the document. For example, onMouseOver is an interactive event handler because it depends on the users action with the mouse.
+  		</li>
+  		<li>
+  			On the other hand non-interactive event handler would be onLoad, because this event handler would automatically execute JavaScript code without the user's interactivity.
+  		</li>		   
+  	</ul>
+  	<h4>
+  		Event Handler is Used in:
+  	</h4>
+  	<table>
+  		<tr>
+  			<td>onAbort</td>
+  			<td>Image</td>
+  		</tr>
+  		<tr>
+  			<td>noBlur</td>
+  			<td>select, text, text area</td>
+  		</tr>
+  		<tr>
+  			<td>onChange</td>
+  			<td>select, text, text area</td>
+  		</tr>
+  		<tr>
+  			<td>onClick</td>
+  			<td>button, checkbox, radio, link, reset, submit, area</td>
+  		</tr>
+  		<tr>
+  			<td>onError</td>
+  			<td>image</td>
+  		</tr>
+  		<tr>
+  			<td>onFocus</td>
+  			<td>select, text, testarea</td>
+  		</tr>
+  		<tr>
+  			<td>onLoad</td>
+  			<td>windows, image</td>
+  		</tr>
+  		<tr>
+  			<td>onMouseOver</td>
+  			<td>link, area</td>
+  		</tr>
+  		<tr>
+  			<td>onMouseOut</td>
+  			<td>link, area</td>
+  		</tr>
+  		<tr>
+  			<td>onSelect</td>
+  			<td>text, textarea</td>
+  		</tr>
+  		<tr>
+  			<td>onSubmit</td>
+  			<td>form</td>
+  		</tr>
+  		<tr>
+  			<td>onUnload</td>
+  			<td>window</td>
+  		</tr>
+  	</table>
+
+  	<h3>Syntax</h3>
+  	<h3>Example</h3>
+
+
+
+
+
+  	<h2>Add an Event Handler to an Element</h2>
+  	<h3>Description:</h3>
+    <p>We can add an Event Handler by two ways:</p>
+    <ol>
+      <li>Internally</li>
+      <li>Externally</li>
+    </ol>
+    <h4>Internally we can use like this example below</h4>
+    <h3>Syntax</h3>
+    <p style="background-color:lightgray;padding:5px;">
+      element.addEventListener(event, function() { //write code }, useCapture);
+    </p>
+  	<h3>Example</h3>
+    <div id="showInternal" style="padding:10px;background-color:blue;color:#fff;">
+      Click Me to see Demo of Internal Event Handler
+    </div>
+    <script>
+      document.getElementById('showInternal').addEventListener('click',function(){
+    alert("hi am clicked");});
+    </script>
+    
+    <h4>Externally we can use like this example below</h4>  
+    <h3>Syntax</h3>
+    <p style="background-color:lightgray;padding:5px;">
+      element.addEventListener(event, function() { //write code }, useCapture);
+    </p>
+    <h3>Example</h3>
+    <div id="showExternal" style="padding:10px;background-color:blue;color:#fff;">
+      Click Me to see Demo of External Event Handler
+    </div>
+    <script>
+      document.getElementById('showExternal').addEventListener('click',showalert);
+    function showalert() {
+      alert("hi i am clicked");
+    }
+    </script>
+
+
+    <h2>Add Many Event Handlers to the Same Element</h2>
+  	<h3>Description:</h3>
+    <p>we can add multiple functions on the same event</p>	
+    <h3>Example</h3>
+    <div id="showManyEvents" style="padding:10px;background-color:blue;color:#fff;">
+      Click Me to see Demo of Adding many Event Handlers or functions on same element
+    </div>
+    <script>
+      document.getElementById('showManyEvents').addEventListener("click",function() {
+        alert("hi first function used by using 'click' event");
+      });
+      document.getElementById('showManyEvents').addEventListener("click",function() {
+        document.getElementById('showManyEvents').innerHTML="hi Second function used on same event 'click'";
+      });
+      document.getElementById('showManyEvents').addEventListener("mousedown",function() {
+        document.getElementById('showManyEvents').innerHTML="hi third function used on different event mousedown but on same element";
+      });
+    </script>
+
+
+
+  	<h2>Add an Event Handler to the Window Object</h2>
+  	<h3>Description:</h3>
+    <p>
+      The addEventListener() method allows you to add event listeners on any HTML DOM object such as HTML elements, the HTML document, the window object, or other objects that supports events, like the xmlHttpRequest object.
+    </p>
+  	<h3>Syntax</h3>
+    <p style="background-color:lightgray;padding:5px;">
+      window.addEventListener(event, function() { //write code }, useCapture);
+    </p>
+  	<h3>Example</h3>
+    <div id="windowEventDemo">Window is not resized....</div>
+    <script>
+      window.addEventListener('resize', function() { 
+        document.getElementById('windowEventDemo').innerHTML="window resized";
+        alert("window resized...");
+      });
+    </script>
+
+
+    <h2>Passing Parameters</h2>
+  	<h3>Description:</h3>
+    <p>
+      When passing parameter values, use an "anonymous function" that calls the specified function with the parameters:
+    </p>
+  	<h3>Syntax</h3>
+    <p style="background-color:lightgray;padding:5px;">
+      element.addEventListener(event, function() { myFunction(p1, p2); }, useCapture);
+    </p>  
+  	<h3>Example</h3>
+      <div id="showPassingParameters" style="padding:10px;background-color:blue;color:#fff;">
+      Click Me to see Demo of Passing parameters from Event Handlers
+    </div>
+    <script>
+      var a;
+      var b;
+      function getValues () {
+        // body...
+        a=prompt('Enter the value of a', '');
+        b=prompt('Enter the value of b', '');      
+      }
+    
+      document.getElementById('showPassingParameters').addEventListener("click", function(){ //function to add two numbers
+          getValues();//get values for two variables
+          myNewFunction(a, b);//add the two variables and display its sum
+        });
+      function myNewFunction(a, b) {
+        var sum=(Number(a)+Number(b));
+        document.getElementById('showPassingParameters').innerHTML="The sum of addition is "+sum;
+        alert("The addition of a and b is "+sum);
+      }
+    </script>
+
+  <h2>Event Bubbling or Event Capturing?</h2>
+  	<h3>Description:</h3>
+    <p>
+      There are two ways of event propagation in the HTML DOM, bubbling and capturing.
+    </p>
+    <ul>
+      <li>      
+        Event propagation is a way of defining the element order when an event occurs. If you have a <p> element inside a <div> element, and the user clicks on the <p> element, which element's "click" event should be handled first?
+      </li>
+      <li>
+        In bubbling the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, then the <div> element's click event.
+      </li>
+      <li>
+        In capturing the outer most element's event is handled first and then the inner: the <div> element's click event will be handled first, then the <p> element's click event.
+      </li>
+      <li>
+        With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter:
+      </li>
+      <li style="background-color:lightgray;padding:5px;">
+        addEventListener(event, function, useCapture);
+      </li>
+      <li>
+        The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.
+      </li>    
+    </ul>
+  	<h3>Example</h3>
+    <div id="outer" style="padding:10px;background-color:blue;color:#fff;">
+      <p id="inner">
+        Click me to see bubbling or capturing
+      </p>
+    </div>
+    <script>
+      //change the capture values to true or false to see bubbling and capturing methods
+      document.getElementById('outer').addEventListener('click',function(){
+        alert("outer click is used");
+      },false);
+      document.getElementById('inner').addEventListener('click',function () {
+        alert("inner click is used");
+      },false)
+    </script>
+
+    <h2>The removeEventListener() method</h2>
+    <h3>Description : </h3>
+    The removeEventListener() method removes event handlers that have been attached with the addEventListener() method:
+    <h3>Syntax</h3>
+    <p style="background-color:lightgray;padding:5px;">
+      element.removeEventListener(event, myFunction);
+    </p>
+    <h3>Example :</h3>
+    <div id="removeEventDemo" style="padding:10px;background-color:blue;color:#fff;">
+      Click to see the alert event
+    </div>
+    <button onclick="removeEventHandler()" style="background:yellow;">Remove the Event Listener for above alert event</button>
+    <script>
+      document.getElementById('removeEventDemo').addEventListener('click',alertFunction);
+      function alertFunction () {
+        alert("alert function called");        
+      }
+      function removeEventHandler () {
+        document.getElementById('removeEventDemo').removeEventListener('click',alertFunction);
+          document.getElementById('removeEventDemo').innerHTML="Event Listener for 'click' event is removed..";
+      }
+    </script>
+
+    <h2>Cross browser Support</h2>
+    
+    <table border="1" style="text-align:center;">
+      <tbody>
+        <tr>
+          <th style="width:20%;font-size:16px;text-align:left;">Method</th>
+          <th style="width:16%;" title="Chrome">Chrome</th>
+          <th style="width:16%;" title="Internet Explorer">IE</th>
+          <th style="width:16%;" title="Firefox">Firefox</th>
+          <th style="width:16%;" title="Safari">Safari</th>
+          <th style="width:16%;" title="Opera">Opera</th>                
+        </tr>
+        <tr>
+          <td style="text-align:left;">addEventListener()</td>
+          <td>1.0</td>
+          <td>9.0</td>
+          <td>1.0</td>
+          <td>1.0</td>
+          <td>7.0</td>
+        </tr>
+        <tr>
+          <td style="text-align:left;">removeEventListener()</td>
+          <td>1.0</td>
+          <td>9.0</td>
+          <td>1.0</td>
+          <td>1.0</td>
+          <td>7.0</td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <strong>Note: </strong>The addEventListener() and removeEventListener() methods are not supported in IE 8 and earlier versions and Opera 7.0 and earlier versions. However, for these specific browser versions, you can use the attachEvent() method to attach an event handlers to the element, and the detachEvent() method to remove it:<br><br>
+      element.attachEvent(event, function);<br>
+      element.detachEvent(event, function);<br>
+    </p>
+    <p>The addEventListener() method is not supported Internet Explorer 8 and earlier versions.</p>
+
+    <h4>This example demonstrates a solution that will work for all browsers.</h4>
+
+    <button id="myBtn">Try it</button>
+
+    <script>
+    var x = document.getElementById("myBtn");
+    if (x.addEventListener) {
+        x.addEventListener("click", myFunction);
+    } else if (x.attachEvent) {
+        x.attachEvent("onclick", myFunction);
+    }
+
+    function myFunction() {
+        alert("Hello World!");
+    }
+    </script>
+  </body>
+</html>

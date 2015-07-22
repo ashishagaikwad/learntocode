@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>DOM NodeList</title>  
+  </head>
+  <body>
+    <h1 style="text-align:center;background:gray;">DOM NodeList</h1>
+    <div>
+      The getElementsByTagName() method returns a node list. A node list is an array-like collection of nodes.<br>
+      Note: The index starts at 0.
+    </div>
+    <p>one</p>
+    <p>two</p>
+    <p>three</p>
+    <script>
+      var taglist=document.getElementsByTagName("p");
+      document.write("first tag is "+taglist[0].innerHTML+"<br>");
+      document.write("second tag is "+taglist[1].innerHTML+"<br>");
+      document.write("third tag is "+taglist[2].innerHTML+"<br>");
+    </script>
+
+    <p id="demo"></p>
+
+    <script>
+    var myNodelist = document.getElementsByTagName("p");
+    document.getElementById("demo").innerHTML =
+    "The innerHTML of the second paragraph is: " +
+    myNodelist[1].innerHTML;
+    </script>
+
+    <h1>HTML DOM Node List Length</h1>
+    <p>
+      The length property defines the number of nodes in a node list:
+    </p>
+    <p id="showPList"></p>
+    <button onclick="changeBlue()">Change all para to blue color</button>
+    <script>
+      var nodelistnew = document.getElementsByTagName("p");
+      document.getElementById('showPList').innerHTML=
+      " Number of p are : "+nodelistnew.length;
+
+      function changeBlue () {
+        for (var i = nodelistnew.length - 1; i >= 0; i--) {
+          nodelistnew[i].style.backgroundColor="blue";
+        };       
+      }
+    </script>
+    <h3>A node list is not an array!</h3>
+    <p>
+      A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array. However, you cannot use Array Methods, like valueOf() or join() on the node list.
+    </p>
+  </body>
+</html>

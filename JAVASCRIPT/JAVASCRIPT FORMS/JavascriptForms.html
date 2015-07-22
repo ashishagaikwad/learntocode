@@ -1,0 +1,177 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> JAVASCRIPT FORMS </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function validate(){
+
+var emailError = checkEmail();
+var radioError = checkRadio();
+var dropdownError = checkDropdown();
+var checkboxError = checkCheckbox();
+
+//VALIDATING ALL ELEMENTS AND THEN SENDING FORM
+//HERE WE COMPLETE OUR VALIDATION OF FORMS
+if(emailError && radioError & dropdownError && checkboxError)
+{
+	document.formOne.submit();
+	return true;
+	
+}
+else
+{
+	return false;
+}
+
+
+}
+
+// VALIDATE EMAIL (OR CHECKING) FUNCTION 
+
+function checkEmail()
+{
+	var email=document.formOne.email.value;
+	if(email == "")
+		 {
+		document.getElementById("email_error").innerHTML = "No Email Address";
+		return false;
+	     }
+	else {
+			document.getElementById("email_error").innerHTML = "";
+			return true;
+		 }
+}
+
+// VALIDATE RADIO BUTTONS (OR CHECKING) FUNCTION 
+function checkRadio()
+{
+	var payment = "";
+	var len=document.formOne.payment.length;
+	var i;
+
+	for(i=0; i<len ;i++)
+		{
+			if(document.formOne.payment[i].checked)
+			{
+				payment = document.formOne.payment[i].value;
+				break;
+	    }
+	  }
+
+	if(payment == "")
+		{
+			document.getElementById("radio_error").innerHTML = "No Payment Option Selected";
+			return false;
+		}
+	else
+		{
+			document.getElementById("radio_error").innerHTML = "";
+			return true;
+	  }
+}
+
+// VALIDATE RADIO BUTTONS (OR CHECKING) FUNCTION 
+function checkDropdown()
+{
+	var chosen = "";
+	var len = document.formOne.hear.length;
+	var i;
+
+	for(i=0; i<len ;i++)
+		{
+			if(document.formOne.hear[i].selected)
+			{
+				chosen = document.formOne.hear[i].value;
+				break;
+	    }
+	  }
+
+	if(chosen == "None")
+		{
+			document.getElementById("dropdown_error").innerHTML = "No Option Chosen";
+			return false;
+		}
+	else
+		{
+			document.getElementById("dropdown_error").innerHTML = "";
+			return true;
+	  }
+}
+
+// VALIDATE CHECK BOXES (OR CHECKING) FUNCTION 
+function checkCheckbox()
+{
+	if(document.formOne.terms.checked)
+			{
+				document.getElementById("checkbox_error").innerHTML = "";
+				return true;
+		    }
+	else
+			{
+				document.getElementById("checkbox_error").innerHTML = "TAC not checked";
+				return false;
+			}
+}
+
+
+
+//-->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<H2><CENTER>JAVASCRIPT FORMS</CENTER></H2>
+
+HTML FORM VALIDATION
+
+<FORM METHOD=GET ACTION="" NAME="formOne">
+<P>
+	EMAIL:<INPUT TYPE="text" NAME="email" VALUE="" PLACEHOLDER="Email Address">
+	<SPAN STYLE="color:red" ID="email_error"></SPAN>
+</P>
+
+<P>
+	PAYMENT OPTIONS:
+	<INPUT TYPE="radio" NAME="payment" VALUE="CC">Credit Card
+	<INPUT TYPE="radio" NAME="payment" VALUE="DC">Debit Card
+	<INPUT TYPE="radio" NAME="payment" VALUE="PP">PayPal
+	<SPAN STYLE="color:red" ID="radio_error"></SPAN>
+</P>
+
+<P>
+WHERE DO YOU HEAR ABOUT US?
+</P>
+<SELECT NAME="hear">
+		<OPTION Value="None">None</OPTION>
+		<OPTION Value="paper">Newspaper</OPTION>
+		<OPTION Value="tv">Television</OPTION>
+		<OPTION Value="mouth">Word of Mouth</OPTION>
+		<OPTION Value="search">Search Engine</OPTION>
+</SELECT>
+<SPAN STYLE="color:red" ID="dropdown_error"></SPAN>
+
+
+<P>
+<LABEL FOR="CB1">
+TERMS AND CONDITIONS
+</LABEL>
+<INPUT TYPE="Checkbox" NAME="terms" ID="CB1" VALUE="TAC">
+<SPAN STYLE="color:red" ID="checkbox_error"></SPAN>
+</P>
+<P>&nbsp;</P>
+
+<INPUT TYPE="button" VALUE="submit" onClick="validate()">
+
+</FORM>
+
+
+
+</BODY>
+</HTML>

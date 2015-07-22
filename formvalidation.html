@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Form Validation</title>
+  <link rel="stylesheet" href="">
+  <script>
+  function validate() {
+	var x=document.myform.name.value;
+	var y=document.myform.pass.value;
+	if(x==="" || x===null){
+		document.getElementById('nA').innerHTML="ENTER NAME PLEASE";
+		document.getElementById('nA').style.color="red";
+	}else if(y==="" || y===null){
+		document.getElementById('pA').innerHTML="ENTER PASSWORD PLEASE";
+		document.getElementById('pA').style.color="red";
+	}else{
+	  document.myform.submit();
+	}
+}
+
+  </script>
+</head>
+<body>
+  <form name="myform" method="get" action="#">
+  <fieldset>
+  <legend>Login Details</legend> 
+  name:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <input type="text" name="name" />
+  <span id="nA"></span>
+  <br>
+  password:&nbsp;
+  <input type="password" name="pass" />
+  <span id="pA"></span>
+  <br/>
+  </fieldset>
+  <fieldset>
+  <legend>Account</legend>
+  <input type="radio" name="account" value="admin"/>Admin Account<br>
+  <input type="radio" name="account" value="user"/>User Account<br>
+  <input type="radio" name="account" value="guest"/>Guest Account<br>
+  </fieldset>
+  <fieldset>
+  <legend>Hobbies</legend>
+  <input type="checkbox" name="hobbies" value="singing"/>Singing<br/>
+  </fieldset>
+  <input type="button" value="submit" onclick="validate()"/>
+</form>
+</body>
+</html>

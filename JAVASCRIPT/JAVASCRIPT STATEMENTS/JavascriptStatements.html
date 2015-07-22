@@ -1,0 +1,110 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> Javascript Statements </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY>
+<H3>Statements define what a script will do and how it will be done..</H3>
+<H3>Statements can set variables equal to a value or it can be a function call</H3>
+<H2>CATEGORIES OF STATEMENTS</H2>
+<H4>In additional to standard statements there are also some DISTINCT statements</H4>
+<OL>
+	<LI><A HREF="#cond">CONDITIONAL STATEMENTS</A></LI>
+	<LI><A HREF="#loop">LOOP STATEMENTS</A></LI>
+	<LI><A HREF="">OBJECT MANIPULATION STATEMENTS</A></LI>
+	<LI><A HREF="">COMMENT STATEMENTS</A></LI>
+	<LI><A HREF="">EXCEPTION HANDLING STATEMENTS</A></LI>
+</OL>
+
+<H2 id="cond">CONDITIONAL STATEMENTS</H2>
+<H4 ONCLICK="ifexample()">Click Me to see "If" Example</H4>
+<H4 ONCLICK="ifelseexample()">Click Me to see "If else" Example</H4>
+<H4 ONCLICK="ElseIfexample()">Click Me to see "Else If" Example</H4>
+
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+function ifexample(){
+var a=confirm(" Conditional if example if you press ok then true ");
+if(a==true)
+  {
+    alert("you pressed ok ...Right");
+  }
+}
+
+function ifelseexample(){
+var b=confirm(" Conditional if else example if you press ok then 'alert box saying OK' else 'alert box saying Cancel'");
+if(b==true)
+      alert("you pressed ok ...Right");
+else
+      alert("you pressed Cancel ...Right");
+}
+
+function ElseIfexample()
+{
+	var p=prompt("Rate your IQ in between 1 to 10");
+	if(p<5 && p>0)
+		alert("Not Good Must Improve");
+	else if(p==5)
+		alert("Good But Can do Better");
+	else if(p>5 && p<=8)
+		alert("Great work ..keep it up");
+	else if(p>8 && p<=10)
+		alert("Excellent...Go Home and sleep");
+	else 
+		alert("wrong input ..please try again");
+	}
+//-->
+</SCRIPT>
+
+<H2 id="loop">LOOP STATEMENTS</H2>
+<H4 ONCLICK="whileexample()">Click Me to see "while loop" Example</H4>
+<H4 ONCLICK="forexample()">Click Me to see "for loop" Example</H4>
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function whileexample()
+{	
+	var o;
+	var count=1;
+	while(o!=false)
+	{
+		o=confirm("Do you want to continue? "+count);
+		count=count+1;
+	}
+}
+
+function forexample()
+{	
+	
+	var i;
+	for(i=0;i<5;i++)
+	{
+		document.write(i+"</br>");
+	}
+	
+}
+
+//-->
+</SCRIPT>
+
+<H2>COMMENT STATEMENTS</H2>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+
+//THIS IS SINGLE LINE COMMENT
+
+/*
+THIS IS MULTI LINE COMMENT 
+*/
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

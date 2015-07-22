@@ -1,0 +1,46 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> HISTORY </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+function goForward(){
+	
+		window.history.forward()
+}
+function goBackward(){
+	window.history.back()
+}
+function TellUrlNo(){
+	alert('no of urls in history : '+history.length)
+}
+//-->
+</SCRIPT>
+
+</HEAD>
+
+<BODY>
+<PRE>
+<H2><CENTER>Window History Page</CENTER></H2>
+<H4>window.history object can be written without the windows prefix</H4>
+<H3>PROPERTIES OF THE HISTORY OBJECT</H3>
+1.length  //returns the number of the url in the history list
+
+<H3>METHODS OF THE HISTORY OBJECT</H3>
+1. forward   //used to go forward
+2. back  ////used to go backward
+
+Note : returns value = nothing
+
+<INPUT TYPE="button" value="GO FORWARD" ONCLICK="goForward()">
+<INPUT TYPE="button" value="GO BACKWARD" ONCLICK="goBackward()">
+<INPUT TYPE="button" value="TELL URL HISTORY LENGTH" ONCLICK="TellUrlNo()">
+</PRE>
+
+</BODY>
+</HTML>

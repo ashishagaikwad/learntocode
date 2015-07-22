@@ -1,0 +1,52 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> New Document </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+</HEAD>
+
+<BODY>
+<PRE>
+<H2><CENTER>Window Navigator Object</CENTER></H2>
+
+<B><H3>The window.navigator object contains information about the visitors browser</H3></B>
+<B>Can be written without the windows prefix</B>
+
+<B><H3>PROPERTIES OF THE NAVIGATOR OBJECT</H3></B>
+1.  appName         //Returns the name of the browser
+2.  appCodeName     //Returns the name of the browser
+3.  platform        //Returns the browsers platform ( Operating System )
+4.  cookieEnabled   //Returns true if cookie is enabled otherwise false
+5.  javaEnabled     //Returns true if java is enabled otherwise false
+6.  product         //Returns the engine name of the browser
+7.  appVersion      //Returns the version information about the browser
+8.  userAgent       //Also returns the version information about the browser
+9.  language        //Returns the browser language
+
+
+Note :
+1. chrome ,firefox and safari return appName "Netscape"
+2. IE,Chrome,Firefox,Safari and Opera all return appCodeName "Mozilla" 
+3. Browser version data can be misleading since browser can change them to avoid site tests
+</PRE>
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write("Browser name(Using appName) = "+navigator.appName+"<BR/>");
+document.write("Browser name(Using appCodeName) = "+navigator.appCodeName+"<BR/>");
+document.write("Browser Platform(Using platform) = "+navigator.platform+"<BR/>");
+document.write("Browser Cookie Enabled(Using cookieEnabled) = "+navigator.cookieEnabled+"<BR/>");
+document.write("Browser Java Enabled(Using javaEnabled() ) = "+navigator.javaEnabled()+"<BR/>"); //use () after javaEnabled
+document.write("Browser Engine(Using product) = "+navigator.product+"<BR/>");
+document.write("Browser Version 1(Using appVersion) = "+navigator.appVersion+"<BR/>");
+document.write("Browser Version 2(Using userAgent) = "+navigator.userAgent+"<BR/>");
+document.write("Browser Language(Using language) = "+navigator.language+"<BR/><BR/><BR/><BR/>");
+
+
+//-->
+</SCRIPT>
+
+</BODY>
+</HTML>

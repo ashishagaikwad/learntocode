@@ -1,0 +1,1 @@
+document.write("JAVASCRIPT IN EXTERNAL FILE");

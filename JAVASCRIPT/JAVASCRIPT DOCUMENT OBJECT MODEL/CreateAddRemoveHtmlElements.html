@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Create Add Remove HTML Elements / Nodes</title>
+    <link rel="stylesheet" href="">
+  </head>
+  <body>
+
+    <h1>Creating New HTML Elements (Nodes)</h1>
+    <div id="div1">
+      <p id="p1">This is a paragraph.</p>
+      <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <script>
+      var para = document.createElement("p");
+      var node = document.createTextNode("This is new.");
+      para.appendChild(node);
+      var element = document.getElementById("div1");
+      element.appendChild(para);
+    </script>
+
+    <h1>Creating new HTML Elements - insertBefore()</h1>
+    <h2>First Example using parent container Body</h2>
+    <p id="firstpara">This is a first para</p>
+    <p id="thirdpara">This is a Third para..Create and Insert second para above this</p>
+    <button onclick="addPara()">CLick to add second para</button>
+    <script>
+      var secondpara = document.createElement("p");
+      var secondparatextnode=document.createTextNode("This is second paragraph..I am created");
+      secondpara.appendChild(secondparatextnode);
+      function addPara () {
+        // body...
+        var parent=document.body;
+        parent.insertBefore(secondpara,thirdpara);
+      }
+    </script>
+
+    <h2>Second Example using parent container div</h2>
+    <div id="myparent">
+      <p id="firstpara1">This is a first para</p>
+      <p id="thirdpara1">This is a Third para..Create and Insert second para above this</p>
+      <button onclick="addPara2()">CLick to add second para</button>      
+    </div>
+    
+    <script>
+      var secondpara1 = document.createElement("p");
+      var secondparatextnode1=document.createTextNode("This is second paragraph..I am created");
+      secondpara1.appendChild(secondparatextnode1);
+      function addPara2 () {
+        // body...
+        var parent=document.getElementById('myparent');
+        parent.insertBefore(secondpara,thirdpara1);
+      }
+    </script>
+
+    <h1>Removing Existing HTML Elements</h1>
+    <p>To remove an HTML element, you must know the parent of the element:</p>
+    <h2>First Example using parent container Body</h2>
+    <p id="fpara">First Paragraph</p>
+    <p id="spara">Second Paragraph</p>
+    <button onclick="RemoveSpara()">Click to Remove Second Para</button>
+    <script>
+      function RemoveSpara () {
+        var Parent=document.body;
+        var Child=document.getElementById('spara')
+        Parent.removeChild(Child);
+      }
+    </script>
+
+    <h2>Second Example using parent container div</h2>
+    <div id="par">
+      <p id="fp">First Paragraph</p>
+      <p id="sp">Second Paragraph</p>  
+    </div>
+    
+    <button onclick="RemoveSp()">Click to Remove Second Para</button>
+    <script>
+      function RemoveSp () {
+        var Parentnew=document.getElementById("par");
+        var Childnew=document.getElementById('sp');
+        Parentnew.removeChild(Childnew);
+      }
+    </script>
+
+    <h1>Replacing HTML Elements</h1>
+    <p>
+      To replace an element to the HTML DOM, use the replaceChild() method:
+    </p>
+
+    <h2>Example</h2>
+    <div id="ParentNewest">
+      <p id="prevChild">I am the first child</p>
+      <p>I am the second child..Click below to replace the first child by new child</p>
+      <button onclick="ReplaceMyChild()">Click to replace the first child</button>
+    </div>
+    <script>
+      var parentcrazy = document.getElementById('ParentNewest');
+      var NewChild = document.createElement("p");
+      var ChildNodeText = document.createTextNode("I am the New Child");
+      NewChild.appendChild(ChildNodeText);
+      function ReplaceMyChild () {
+        var OldChild=document.getElementById('prevChild');
+        parentcrazy.replaceChild(NewChild,OldChild);
+      }
+    </script>
+  </body>
+</html>

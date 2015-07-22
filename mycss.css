@@ -1,0 +1,52 @@
+#h{
+	text-align: center;
+	height: 10%;
+	width: 100%;
+	background-color: blue;
+	color: yellow;
+	margin: 0%;
+}
+html,body{
+background-color: black;
+	color: green;
+	height: 100%;
+	width: 100%;
+	margin: 0%;
+
+}
+.mb{
+background-color: yellow;
+width: 25%;
+height: 50%;
+float: left;
+margin: 0%;
+}
+.container{
+	height: 100%;
+	width: 100%;
+	margin: 0%;
+
+}
+h1{
+	color: yellow;
+	background-color: green;
+	margin: 0%;
+	height: 50%;
+	width: 100%;
+}
+#s{
+background-color: yellow;
+color: red;
+height: 80%;
+width: 100%;
+margin: 0%;
+
+}
+
+#f{
+	height: 10%;
+	width: 100%;
+	margin: 0%;
+
+
+}

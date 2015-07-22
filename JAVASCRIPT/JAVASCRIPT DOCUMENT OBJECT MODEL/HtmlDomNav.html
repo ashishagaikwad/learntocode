@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Javascript HTML DOM Navigation</title>
+    <style>
+      .showcode {
+        background-color: black;
+        color: white;
+      }
+    </style>
+
+  </head>
+  <body>
+    <h1 style="text-align:center;">Javascript HTML DOM Navigation</h1>
+    <p>With the HTML DOM, you can navigate the node tree using node relationships.</p>
+    <h2>DOM Nodes</h2>
+    <p>According to the W3C HTML DOM standard, everything in an HTML document is a node:</p>
+    <ul>
+      <li>The entire document is a document node</li>
+      <li>Every HTML element is an element node</li>
+      <li>The text inside HTML elements are text nodes</li>
+      <li>Every HTML attribute is an attribute node</li>
+      <li>All comments are comment nodes</li>    
+    </ul>
+    <p>
+      With the HTML DOM, all nodes in the node tree can be accessed by JavaScript.
+    New nodes can be created, and all nodes can be modified or deleted.
+    </p>
+    <h2>TOPICS</h2>
+    <ul>
+      <li>DOM Nodes</li>
+      <li>Node Relationships</li>
+      <li>Node tree</li>
+      <li>Navigating Between Nodes</li>
+      <li>Child Nodes and Node Values</li>
+      <li>DOM Root Nodes</li>
+      <li>The nodeName Property</li>
+      <li>The nodeValue Property</li>
+      <li>The nodeType Property</li>
+    </ul>
+
+
+    <h2>Node Relationships</h2>
+    <p>
+      The nodes in the node tree have a hierarchical relationship to each other.
+    </p>
+    <p>
+      The terms parent, child, and sibling are used to describe the relationships.       
+    </p>
+    <ul>
+      <li>
+        In a node tree, the top node is called the root (or root node)
+      </li>
+      <li>
+        Every node has exactly one parent, except the root (which has no parent)
+      </li>
+      <li>
+        A node can have a number of children
+      </li>
+      <li>
+        Siblings (brothers or sisters) are nodes with the same parent
+      </li>
+    </ul>
+    
+    <p>
+      Note : I used an online tool which could convert html code to display on the webpage as it..here is the link :
+      <a href="http://www.freebits.co.uk/convert-html-code-to-text.html" title="">
+        Click here to convert your HTML code to display it on the website..
+      </a>
+    </p>
+    <pre class="showcode">
+      &lt;html&gt;<br/>
+        &lt;head&gt;<br/>
+          &lt;title&gt;DOM Tutorial&lt;/title&gt;<br />
+        &lt;/head&gt;<br/>
+        &lt;body&gt;<br/>
+          &lt;h1&gt;DOM Lesson one&lt;/h1&gt;<br/>
+          &lt;p&gt;Hello world!&lt;/p&gt;<br/>
+        &lt;/body&gt;<br/>
+      &lt;/html&gt;  
+    </pre>
+
+    <h2>Node tree</h2>
+    <img src="nodeRelDemo.gif">
+    <p></p>From the HTML above you can read:
+    <ul>
+      <li>&lt;html&gt; is the root node<br/></li>
+      <li>&lt;html&gt; has no parents<br /></li>
+      <li>&lt;html&gt; is the parent of &lt;head&gt; and &lt;body&gt;<br /></li>
+      <li>&lt;head&gt; is the first child of &lt;html&gt;<br /></li>
+      <li>&lt;body&gt; is the last child of &lt;html&gt;<br />and:</li>
+      
+      <li>&lt;head&gt; has one child: &lt;title&gt;<br /></li>
+      <li>&lt;title&gt; has one child (a text node): "DOM Tutorial"<br /></li>
+      <li>&lt;body&gt; has two children: &lt;h1&gt; and &lt;p&gt;<br /></li>
+      <li>&lt;h1&gt; has one child: "DOM Lesson one"<br /></li>
+      <li>&lt;p&gt; has one child: "Hello world!"<br /></li>
+      <li>&lt;h1&gt; and &lt;p&gt; are siblings</li>      
+    </ul>
+
+    <h2>Navigating Between Nodes</h2>
+    <p>You can use the following node properties to navigate between nodes with JavaScript:</p>
+    <ul>
+      <li>parentNode</li>
+      <li>childNodes[nodenumber]</li>
+      <li>firstChild</li>
+      <li>lastChild</li>
+      <li>nextSibling</li>
+      <li>previousSibling</li>      
+    </ul>
+
+    <h2>Warning !</h2>
+    <p>
+      A common error in DOM processing is to expect an element node to contain text.
+    </p>
+    <p>
+      In this example: &lt;title&gt;DOM Tutorial&lt;/title&gt;, the element node &lt;title&gt; does not contain text. It contains a text node with the value "DOM Tutorial".      
+    </p>
+    <p>
+      The value of the text node can be accessed by the node's innerHTML property, or the nodeValue.      
+    </p>
+    <h2>
+      Child Nodes and Node Values      
+    </h2>
+    <p>
+      In addition to the innerHTML property, you can also use the childNodes and nodeValue properties to get the content of an element.      
+    </p>
+    <p>
+      The following example collects the node value of an &lt;h1&gt; element and copies it into a &lt;p&gt; element:      
+    </p>
+
+    <h3>Example</h3>
+    <p id="one" onclick="childNodeDemo()">one</p>
+    <p id="two">two</p>
+    <script type="text/javascript">
+      var x;
+      x=document.getElementById('two').childNodes[0].nodeValue;
+      function childNodeDemo() {
+        document.getElementById('one').innerHTML=x;
+      }
+    </script>
+    <h3>Another Example</h3>
+    <div id="parent" onclick="childNodeDemoNew()" style="background:gray;">
+      <p id="first">first</p>
+      <p id="second">second</p>
+      <p id="third">third</p>     
+    </div>
+     
+    <script type="text/javascript">
+      var y;
+      var z;      
+      y=document.getElementById('parent').childNodes[1].childNodes[0].nodeValue;
+      z=document.getElementById('first').nextSibling.childNodes[0].nodeValue;
+      function childNodeDemoNew() {
+        document.getElementById('second').innerHTML=y;
+        document.getElementById('third').innerHTML=z;
+
+      }
+    </script>
+    <pre class="showcode">
+      &lt;html&gt;<br/>
+        &lt;body&gt;<br/>          
+          &lt;h1 id="intro"&gt;My First Page&lt;/h1&gt;<br/>          
+          &lt;p id="demo"&gt;Hello!&lt;/p&gt;<br/>          
+          &lt;script&gt;<br/>
+            var myText = document.getElementById("intro").childNodes[0].nodeValue;<br/>
+            document.getElementById("demo").innerHTML = myText;<br/>
+          &lt;/script&gt;<br/>          
+        &lt;/body&gt;<br/>
+      &lt;/html&gt;<br/>
+    </pre>
+    <h3>Try it Yourself »</h3>
+    <div id="demo1">
+        
+    </div>
+
+    <p>
+      In the example above, getElementById is a method, while childNodes and nodeValue are properties.      
+    </p>
+    <p>
+      In this tutorial we use the innerHTML property. However, learning the method above is useful for understanding the tree structure and the navigation of the DOM.      
+    </p>
+    <p>
+      Using the firstChild property is the same as using childNodes[0]:
+    </p>
+    <h3>Example</h3>
+    <pre class="showcode">
+      &lt;html&gt;<br/>
+        &lt;body&gt;<br/>        
+        &lt;h1 id="intro"&gt;My First Page&lt;/h1&gt;<br/>
+        &lt;p id="demo"&gt;Hello World!&lt;/p&gt;<br/>
+        &lt;script&gt;<br />
+        myText = document.getElementById("intro").firstChild.nodeValue;<br/>
+        document.getElementById("demo").innerHTML = myText;<br/>
+        &lt;/script&gt;<br/>
+        &lt;/body&gt;<br />
+      &lt;/html&gt;<br />
+    </pre>
+    <h3>Try it Yourself »</h3>
+
+
+    <h2>DOM Root Nodes</h2>
+    <p>
+      There are two special properties that allow access to the full document:
+    </p>
+    <ul>
+      <li>
+        document.body - The body of the document
+      </li>
+      <li>
+        document.documentElement - The full document
+      </li>
+    </ul>
+    <h3>Example</h3>
+    <pre class="showcode">
+      &lt;html&gt;<br />
+        &lt;body&gt;<br />        
+          &lt;p&gt;Hello World!&lt;/p&gt;<br />
+          &lt;div&gt;<br />
+          &lt;p&gt;The DOM is very useful!&lt;/p&gt;<br />
+          &lt;p&gt;This example demonstrates the &lt;b&gt;document.body&lt;/b&gt; property.&lt;/p&gt;<br/>
+          &lt;/div&gt;<br />        
+          &lt;script&gt;<br />
+          alert(document.body.innerHTML);<br />
+          &lt;/script&gt;<br />        
+        &lt;/body&gt;<br />
+      &lt;/html&gt;
+    </pre>
+
+    <h3>Try it Yourself »</h3>
+    <button onclick="f()">Click to view all html in the body</button>
+    <script>
+    function f () {
+      alert(document.body.innerHTML);
+    }
+    </script>
+
+
+    <h3>Example</h3>
+    <pre class="showcode">
+      &lt;html&gt;<br />
+        &lt;body&gt;<br />
+          &lt;p&gt;Hello World!&lt;/p&gt;<br />
+          &lt;div&gt;<br />
+          &lt;p&gt;The DOM is very useful!&lt;/p&gt;<br />
+          &lt;p&gt;This example demonstrates the &lt;b&gt;document.documentElement&lt;/b&gt; property.&lt;/p&gt;<br />
+          &lt;/div&gt;<br />
+          &lt;script&gt;<br />
+          alert(document.documentElement.innerHTML);<br />
+          &lt;/script&gt;<br />
+        &lt;/body&gt;<br />
+      &lt;/html&gt;
+    </pre>
+    <pre class="showcode">
+      
+    </pre>
+    <h3>Try it Yourself »</h3>
+    <button onclick="g()">Click to view all html or full document</button>
+    <script>
+    function g () {
+      alert(document.documentElement.innerHTML);
+    }
+    </script>
+
+
+    <h2>The nodeName Property</h2>
+    <p>The nodeName property specifies the name of a node.</p>
+    <ul>
+      <li>nodeName is read-only</li>
+      <li>nodeName of an element node is the same as the tag name</li>
+      <li>nodeName of an attribute node is the attribute name</li>
+      <li>nodeName of a text node is always #text</li>
+      <li>nodeName of the document node is always #document</li>
+      <li></li>
+    </ul>
+    <p>
+      <strong>Note: </strong>nodeName always contains the uppercase tag name of an HTML element.
+    </p>
+
+    <h2>The nodeValue Property</h2>
+    <p>
+      The nodeValue property specifies the value of a node.      
+    </p>
+    <ul>
+      <li>nodeValue for element nodes is undefined</li>
+      <li>nodeValue for text nodes is the text itself</li>
+      <li>nodeValue for attribute nodes is the attribute value</li>      
+    </ul>
+    
+    <h2>The nodeType Property</h2>
+    <p>
+      The nodeType property returns the type of node. nodeType is read only.
+    </p>
+    <p>
+      The most important node types are:      
+    </p>
+    <table border="1">
+      <tbody>
+        <tr>
+          <th>Element type</th>
+          <th>NodeType</th>
+        </tr>
+        <tr>
+          <td>Element</td>
+          <td>1</td>
+        </tr>
+        <tr>
+          <td>Attribute</td>
+          <td>2</td>
+        </tr>
+        <tr>
+          <td>Text</td>
+          <td>3</td>
+        </tr>
+        <tr>
+          <td>Comment</td>
+          <td>8</td>
+        </tr>
+        <tr>
+          <td>Document</td>
+          <td>9</td>
+        </tr>
+      </tbody>
+    </table>
+    <a href="CreateAddRemoveHtmlElements.html">Next Chapter:Creating adding and removing HTML Elements/Nodes</a>
+
+
+  </body>
+</html>

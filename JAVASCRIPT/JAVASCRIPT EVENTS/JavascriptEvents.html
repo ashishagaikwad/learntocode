@@ -1,0 +1,62 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> JAVASCRIPT EVENTS </TITLE>
+<META NAME="Generator" CONTENT="EditPlus">
+<META NAME="Author" CONTENT="">
+<META NAME="Keywords" CONTENT="">
+<META NAME="Description" CONTENT="">
+
+<SCRIPT LANGUAGE="JavaScript">
+<!--
+document.write("THIS IN DOCUMENT LOADING EVENT.</BR>");
+//-->
+</SCRIPT>
+</HEAD>
+
+<BODY>
+
+<H3>An Event in Javascript is something that happens with or on the webpage..</H3>
+<HR>
+<H4>Few Examples of Events</H4>
+<OL>
+	<LI>A Mouse click</LI>
+	<LI>Webpage loading</LI>
+	<LI>mouse over a hotspot also called hovering</LI>
+	<LI>Selecting an input box in a form</LI>
+	<LI>A Keystroke</LI>
+</OL>
+<PRE>
+<H2 ID="click" onclick="changeme()">CLICK ME TO SEE AN EVENT</H2>
+<H2 ID="click1" onclick="changemycolor()">CHANGE MY COLOR</H2>
+<H2 ID="click2" onmouseover="hoverme()" onmouseout="unhoverme()">HOVER ME</H2>
+select box<INPUT TYPE="text" NAME="text" onclick="boxprompt()">
+<SCRIPT LANGUAGE="JavaScript">
+document.write("DOCUMENT BODY LOADED..</BR>");
+<!--
+function changeme()
+{
+	document.getElementById("click").innerHTML="YOU CLICKED ME DIDN'T YOU..";
+}
+function changemycolor()
+{
+	document.getElementById("click1").style.color = "red";
+}
+function hoverme()
+{
+	document.getElementById("click2").innerHTML="HEY GET YOUR CURSOR OFF ME..";
+}
+function unhoverme()
+{
+	document.getElementById("click2").innerHTML="THANKS BUT DONT DO THAT AGAIN..";
+}
+function boxprompt(){
+alert("HEY YOU SELECTED ME THANKS");
+}
+//-->
+</SCRIPT>
+
+
+</PRE>
+</BODY>
+</HTML>

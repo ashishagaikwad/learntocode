@@ -1,0 +1,51 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>FORM ELEMENTS</title>
+</head>
+<body>
+	<!--This is a container-->
+	<div class="container">
+		<!--This is a wrapper-->
+		<div class="wrapper">
+			<form action="login.php" method="get">
+				<fieldset>
+					<legend>Personal Details</legend>
+					<label for="uname">Name: </label><input type="text" value="" id="uname"/>
+					<label for="pwd">Password: </label><input type="password" value="" id="pwd"/>
+					<label for="dob">Date of Birth: </label><input type="date" value="" id="dob" />
+				</fieldset>
+				<fieldset>
+					<legend>Select Gender</legend>
+					<input type="radio" name="gender" value="male" id="male"><label for="male">male</label>
+					<input type="radio" name="gender" value="female" id="female"><label for="female">female</label>
+				</fieldset>
+				<fieldset>
+					<legend>Select your hobbies and country</legend>
+					<input type="checkbox" name="hobbies" value="cricket" id="cricket"><label for="cricket">cricket</label>
+					<input type="checkbox" name="hobbies" value="singing" id="singing"><label for="singing">singing</label>
+					<input type="checkbox" name="hobbies" value="dancing" id="dancing"><label for="dancing">dancing</label>
+					<input type="checkbox" name="hobbies" value="sleeping" id="sleeping"><label for="sleeping">sleeping</label>
+					<p>
+					<label for="country">COUNTRY</label>
+					<select id="country">
+						<optgroup label="asia">
+							<option selected="selected">india</option>
+							<option>china</option>
+						</optgroup>
+						<optgroup label="other">
+							<option>africa</option>
+							<option>america</option>
+					    </optgroup>
+					</select>
+				    </p>
+				    <label for="comment">comments:</label>
+				    <textarea cols="number" name="string" rows="number" id="comment">
+				    </textarea>
+				</fieldset>
+				<input type="submit">
+			</form>
+		</div>
+	</div>
+</body>
+</html>
