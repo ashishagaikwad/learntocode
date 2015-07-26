@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LEARN AJAX | HOME</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h2>LEARN AJAX</h2>
+      <script>        
+        
+        function showex(topic) {                    
+          // The below code helps us to insert new html in the page body section.
+          document.getElementById('section').innerHTML = '<object type="text/html" style="width:100%;" data="'+topic+'" ></object>';
+        }      
+                      
+      </script>
+    </header>
+    <nav>
+      <ul>
+        <li title="AJAX Example" onclick="showex('topics/firstprog.html')">AJAX Example</li>
+        <li title="AJAX XMLHttp" onclick="showex('topics/AjaxXmlHttp.html')">AJAX XMLHttp</li>
+        <li title="AJAX Request" onclick="showex('topics/AjaxRequest.html')"><a href="">AJAX Request</a></li>
+        <li title="AJAX Response" onclick="showex('topics/AjaxResponse.html')"><a href="">AJAX Response</a></li>
+        <li title="AJAX Events" onclick="showex('topics/AjaxEvents.html')"><a href="">AJAX Events</a></li>
+        <li title="AJAX PHP" onclick="showex('topics/AjaxPhp.html')"><a href="">AJAX PHP</a></li>
+        <li title="AJAX Database" onclick="showex('topics/AjaxDb.html')"><a href="">AJAX Database</a></li>
+        <li title="AJAX ASP" onclick="showex('topics/AjaxAsp.html')"><a href="">AJAX ASP</a></li>
+        <li title="AJAX XML File" onclick="showex('topics/AjaxXml.html')"><a href="">AJAX XML File</a></li>
+      </ul>
+    </nav>
+    <section id="section">
+      Lets learn AJAX
+    </section>
+    <footer>
+      &copy;Copyright by Sunarj Technologies
+    </footer>
+  </div>
+</body>
+</html> 

@@ -1,0 +1,52 @@
+*{
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+body{
+  width: 100%;
+}
+
+header{
+  width: 100%;
+  text-align: center;
+  background: black;
+  color: #fff;
+}
+nav{
+  width: 20%;  
+  display: inline-block;
+  background: gray;
+  color: #fff;
+}
+section{
+  width: 78%;    
+  display: inline-block;
+  vertical-align: top;
+  background: white;
+  color: #000;
+}
+footer{
+  width: 100%;
+  text-align: center;
+  background: black;
+  color: #fff;
+}
+/*Nav styling*/
+nav li{
+  padding: 5px;
+  border: 2px solid green;
+  border-radius: 5px;
+}
+nav li:hover{
+  cursor: pointer;
+}
+nav li:active{
+  background-color: black;
+}
+nav li a{
+  text-decoration: none;
+  color: #fff;
+}
+

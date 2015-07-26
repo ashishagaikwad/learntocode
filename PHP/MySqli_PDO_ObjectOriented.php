@@ -53,7 +53,7 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-
+/*
 //update rows in the table
 $sql = "update userlogin set username = 'ashish' where password = 'pratiksha'";
 $result = $conn->query($sql);
@@ -79,8 +79,10 @@ if ($result->num_rows > 0) {
 } else {
     echo "0 results";
 }
-/*
+
+
 //delete rows from table
+/*
 $sql = "delete from learnphp.userlogin";
 $result = $conn->query($sql);
 $getaffectedrows = $conn->affected_rows; // wrote a separate var to contain affected rows..
@@ -92,12 +94,12 @@ else {
   echo $conn->affected_rows." rows deleted!!!<br>";
   echo "Or you can say Number of deleted rows is ".$getaffectedrows;
 }
-*/
+
 
 //limit data from mysql table
 /*
   The limit command is used to fetch limited data from the mysql table
-*/
+
 echo "<br>Starting limit function to limit 4 rows from beginning<br>";
 $sql = "select * from userlogin limit 4";
 //select rows limited to 4
@@ -116,7 +118,7 @@ else{
   Modification to the limit query to limit the rows from a specific index of the rows
   suppose we want to get rows from results starting from 3rd to 7th of result then we can use
   select * from userlogin limit 4 offset 4
-*/
+
 echo "<br>Starting limit function to limit 4 rows from beginning<br>";
 //$sql = "select * from userlogin limit 5 offset 4";
 //the above query tells that we limit 5 rows and offset 4 which means starting 
@@ -148,25 +150,60 @@ else {
   echo "error adding records...!!!";
 }
 
+*/
+
 //USING PREPARE STATEMENTS TO ADD VALUES DYNAMICALLY
 //$stmt = $conn->prepare("INSERT INTO userlogin ('username','password','id') VALUES (?,?,?);");
-$stmt = mysqli_prepare($conn, "INSERT INTO userlogin VALUES (?, ?, ?)");
-$stmt->bind_param('ssi',$username,$password,$id);
+//mysqli::prepare ( string $query )
+//if ($stmt = $conn->prepare("INSERT INTO userlogin ('username','password','id') VALUES (?, ?, ?)")) {
+echo "results before prepare stmt<br>";
+$sql = "select * from userlogin;";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  # code...
+  echo "Prepare stmts has following result: <br>";
+  while ($row=$result->fetch_assoc()) {
+    # code...
+    echo $row["id"]." username: ".$row["username"]." password: ".$row["password"]."<br>";
+  }
+}
 
-$id='';
+
+if ($stmt = $conn->prepare("insert into userlogin values(?,?,?)")) {
+  # code...
+$stmt->bind_param('ssi',$username,$password,$id);
+$countupdate=0;
 //now set parameters and execute
+$id = "";
+
 $username = 'bunty';
 $password = 'bunty';
 $stmt->execute();
-
+$countupdate += $conn->affected_rows;
 
 $username = 'aunty';
 $password = 'aunty';
 $stmt->execute();
+$countupdate += $conn->affected_rows;
 
-echo "new records added successfully by prepare statements!!!";
-$stmt->close();
+echo "<br>".$countupdate." new records added successfully by prepare statements!!!<br>";
+//$stmt->close();
+}
+else{
+  echo "<br>error adding records";
+}
 
+echo "After Using Prepare Statement<br>";
+$sql = "select * from userlogin;";
+$result = $conn->query($sql);
+if ($result->num_rows > 0) {
+  # code...
+  echo "Prepare stmts has following result: <br>";
+  while ($row=$result->fetch_assoc()) {
+    # code...
+    echo $row["id"]." username: ".$row["username"]." password: ".$row["password"]."<br>";
+  }
+}
 
 $conn->close();
 ?>

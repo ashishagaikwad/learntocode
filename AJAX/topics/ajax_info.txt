@@ -1,0 +1,2 @@
+hi ajax is not a new language<br/>
+its only using xml and javascript
