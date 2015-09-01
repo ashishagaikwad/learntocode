@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>JS Bin</title>
+  <script>
+    function validate(){
+      var x = document.forms.myform.myname.value;
+      if(x === null || x === ""){
+        document.getElementById("nameVal").innerHTML = "Insert Name!!!";
+        return false;
+      }
+    }
+  </script>
+</head>
+<body>
+  <form action = "#" name="myform" onsubmit = "return validate()">
+    <!-- 
+    Here validation is done by both ways 
+    1) When the input box loses focus
+    2) When the submit button is clicked without filling up the input box
+    Note: when using the second option when we use onsubmit attritute in form and write as
+        onsubmit="return validate()" then we must remember to return false during submit in case of 
+        incorrect validation else the data will still be submitted.
+    -->
+    Name: <input type="text" name="myname" onblur="validate()"><span id="nameVal"></span>
+    <input type="submit">
+  </form>
+</body>
+</html>
