@@ -1,0 +1,154 @@
+ /*------------------------------------------------------------------
+  [Table of contents]
+
+  1. CSS Reset Code (Eric Meyers Reset/HTML5 display-role reset for older browsers)      
+  2. Helper Classes
+  3. Custom styles
+    3.1. Main
+    3.2. Header
+    3.3. Body
+    3.4. Footer
+  4. Media Queries  
+  ------------------------------------------------------------------*/
+
+/* ==========================================================================
+ 1. CSS Reset Code
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0b1 | 201101
+   NOTE: WORK IN PROGRESS
+   USE WITH CAUTION AND TEST WITH ABANDON
+ ========================================================================== */
+  
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, address, big, cite, code,
+del, dfn, img, ins, kbd, q,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+  padding: 0;
+  border: 0;
+  margin: 0;
+  font-size: 100%;
+  font: inherit;
+  outline: 0;
+  vertical-align: baseline;
+}
+
+ol, ul { list-style: none; }
+
+blockquote, q { quotes: none; }
+
+blockquote:before,
+blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+
+
+/* ==========================================================================
+   2. Helper classes
+   ========================================================================== */
+/* .clearfix : Used to contain floats */
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+
+/* Contain floats: h5bp.com/q */
+.clearfix:after { clear: both; }
+
+.clearfix { _zoom: 1; }
+
+
+/* ==========================================================================
+   2. Custom Styles
+   ========================================================================== */
+
+/*--------------- 3.1 Main --------------------- */
+
+.container { 
+  width:100%;
+  background-color: #256A8A;
+}
+.wrapper {
+  width: 75%;
+  margin: 0 auto;
+ }
+
+/*--------------- 3.2 Header --------------------- */
+h1 {
+  float: left;
+  font-size: 1.7em
+}
+
+h1 a {
+  text-decoration: none;
+  color: #7BBEE2;
+  font-size: inherit;
+}
+
+h1 img {
+  width: 115px;
+  height: 115px;
+  background-origin: content-box;
+  background-size: contain;
+  vertical-align: middle;
+}
+
+header { padding: 10px; }
+
+header .wrapper {
+  border-bottom: 2px solid #266B90;
+  border-style: groove;
+  box-shadow: 0px 4px #0E3A54;
+}
+
+header nav { float: right; }
+
+header ul { margin: 45px 0px; }
+
+header li{
+  padding: 5px;
+  display: inline-block;    
+}
+
+header li a {
+  padding: 5px 10px;
+  border: 1px solid #5EB5E4;
+  border-radius: 10px;
+  border-left: none;
+  border-right: none;
+  text-decoration: none;
+  color: #7BBEE2;
+}
+
+header li a:hover {
+  color: #fff;
+  border-color: #fff;
+}
+
+/*--------------- 3.3 Section --------------------- */
+/*--------------- 3.4 Footer--------------------- */
+footer {
+
+}
+footer .wrapper {
+  box-sizing: border-box;
+  padding: 20px;
+  text-align: right;
+  color: #fff;
+  border-top: 2px solid #266B90;
+  border-style: groove;
+  box-shadow: 0px 4px #0E3A54;
+  border-bottom: none;
+}
+/* ==========================================================================
+   4. Media Queries
+   ========================================================================== */
