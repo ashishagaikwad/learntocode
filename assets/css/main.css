@@ -135,6 +135,13 @@ header li a:hover {
 }
 
 /*--------------- 3.3 Section --------------------- */
+
+/* js intro */
+section ul { padding-left: 30px; }
+
+section li { list-style-type: decimal; }
+
+
 /*--------------- 3.4 Footer--------------------- */
 footer .wrapper {
   box-sizing: border-box;

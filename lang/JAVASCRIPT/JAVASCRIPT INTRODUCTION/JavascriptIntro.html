@@ -67,6 +67,64 @@
             <li>JavaScript Can Change HTML Styles (CSS)</li>
             <li>JavaScript Can Validate Data</li>
           </ul>
+
+          <h5>Changing HTML Content</h5>
+          <p id="change" onclick="changeMe()">hi Ashish click Me</p>
+          <script>
+            function changeMe () {
+              document.getElementById("change").innerHTML="You are an Idiot";
+              document.getElementById("change").innerHTML += "....I KNOW";
+            }    
+          </script>
+
+          <h5>Changing HTML Attributes</h5>
+          <p>
+            hover on below image to change it
+          </p>
+          <img id="codeimage" src="/learntocode/assets/images/codeunhover.png" width="40px" height="40px" onmouseover="changeMyAttribute()" />
+          <script>
+            function changeMyAttribute () {
+              var image = document.getElementById("codeimage");
+              if (image.src.match("codeunhover")) {
+                image.src = "/learntocode/assets/images/codeonhover.png";
+              } else{
+                image.src = "/learntocode/assets/images/codeunhover.png";
+              };
+            }
+          </script>
+
+          <h5>Changing HTML Styles</h5>
+          <p id="changestyle" onclick="changemystyle()">Click Me to change my style</p>
+          <script>
+            function changemystyle () {
+              var getid = document.getElementById("changestyle");
+              getid.style.color ="red";
+            }
+          </script>
+
+          <h5>Validate Data</h5>
+          <form>
+            <span id="showerror"></span>
+            Name: <input type="text" id="name" onblur="validatefield(this)"><br><span id="nameempty"><span>
+            Password: <input type="password" id="pwd" onblur="validatefield(this)"><br><span id="pwdempty"><span>
+            <input type="submit">
+          </form>
+
+          <script>
+            function validatefield(id1) {
+              var x = document.getElementById(id1);       
+
+              if (x == null) {
+                console.log(x);
+                if (x.id == "name") {
+                  document.getElementById("nameempty").innerHTML = "Please Enter Field";
+                } else{
+                  document.getElementById("pwdempty").innerHTML = "Please Enter Field";
+                };
+                 
+              };
+            }
+          </script>
         </div>        
       </section>
       <!-- Section Ended-->
