@@ -141,17 +141,20 @@ section ul { padding-left: 30px; }
 
 section li { list-style-type: decimal; }
 
+#nameempty,
+ #pwdempty { color: red; }
+
+
 
 /*--------------- 3.4 Footer--------------------- */
 footer .wrapper {
   box-sizing: border-box;
   padding: 20px;
-  text-align: right;
-  color: #fff;
   border-top: 4px solid #266B90;
   border-style: groove;
-
   border-bottom: none;
+  text-align: right;
+  color: #fff;  
 }
 /* ==========================================================================
    4. Media Queries
