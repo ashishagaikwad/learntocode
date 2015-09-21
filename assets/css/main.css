@@ -143,8 +143,19 @@ section li { list-style-type: decimal; }
 
 #nameempty,
  #pwdempty { color: red; }
-
-
+ 
+h4 {
+  font-size: 23px;
+  font-weight: bold;
+}
+h5 {
+  font-size: 20px;
+  font-weight: bold;
+}
+h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
 
 /*--------------- 3.4 Footer--------------------- */
 footer .wrapper {

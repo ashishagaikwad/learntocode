@@ -120,10 +120,10 @@
               if (elem.value == "" || elem.value == null) {                
                 if (x == "name") {
                   console.log(x);
-                  document.getElementById("nameempty").innerHTML = "Please Enter Field";
+                  document.getElementById("nameempty").innerHTML = "Please Enter UserName";
                 } else{
                   console.log(x);
-                  document.getElementById("pwdempty").innerHTML = "Please Enter Field";
+                  document.getElementById("pwdempty").innerHTML = "Please Enter Password";
                 }               
               } else {
                 if (x == "name") {
@@ -136,7 +136,72 @@
               }
             }
           </script>
-        </div>        
+
+          <h3>Where JS should Be Placed??</h3>
+          <ul>
+            <li>Javascript in Head</li>
+            <li>Javascript in Body</li>
+            <li>Javascript in External File</li>            
+          </ul>
+
+          <h4>Javascript in Head</h4>
+          <p>
+            When we want a program in javascript to be executed before the body loads or we want to use a function then we can place it in the javascript.
+          </p>
+
+          <h4>Javascript in Body</h4>
+          <p>
+            We can place javascript in body
+          </p>
+
+          <h4>Javascript in External Files</h4>
+          <p>
+            We can place javascript in body.
+          </p>
+          <p>
+            Placing JavaScripts in external files has some advantages:
+          </p>
+          <ul>
+            <li>
+              It separates HTML and code
+            </li>
+            <li>
+              It makes HTML and JavaScript easier to read and maintain
+            </li>
+            <li>
+              Cached JavaScript files can speed up page loads
+            </li>
+          </ul>
+
+
+          <h4>
+            JavaScript Output
+          </h4>
+          <p>
+            JavaScript does NOT have any built-in print or display functions.  
+          </p>
+          <p>
+            JavaScript can "display" data in different ways:  
+          </p>
+          <ol>
+            <li>Writing into an alert box, using window.alert().</li>
+            <li>Writing into the HTML output using document.write().</li>
+            <li>Writing into an HTML element, using innerHTML.</li>
+            <li>Writing into the browser console, using console.log().</li>
+          </ol>
+            
+
+
+          <p onclick="testSequenceExecution()">click to check execution of a function defined after </p>
+
+          <script>
+            function testSequenceExecution() {
+              alert("hello");
+            }
+          </script>
+
+
+        </div>
       </section>
       <!-- Section Ended-->
           

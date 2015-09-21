@@ -73,7 +73,7 @@
                 -->
               </li>
               <li>
-                <a href="">
+                <a href="JAVASCRIPT STATEMENTS/JavascriptStatements.html">
                   JS Statements and Comments
                 </a>
               </li>

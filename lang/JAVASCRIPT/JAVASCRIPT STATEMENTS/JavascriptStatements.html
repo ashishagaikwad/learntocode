@@ -9,102 +9,192 @@
 </HEAD>
 
 <BODY>
-<H3>Statements define what a script will do and how it will be done..</H3>
-<H3>Statements can set variables equal to a value or it can be a function call</H3>
-<H2>CATEGORIES OF STATEMENTS</H2>
-<H4>In additional to standard statements there are also some DISTINCT statements</H4>
-<OL>
-	<LI><A HREF="#cond">CONDITIONAL STATEMENTS</A></LI>
-	<LI><A HREF="#loop">LOOP STATEMENTS</A></LI>
-	<LI><A HREF="">OBJECT MANIPULATION STATEMENTS</A></LI>
-	<LI><A HREF="">COMMENT STATEMENTS</A></LI>
-	<LI><A HREF="">EXCEPTION HANDLING STATEMENTS</A></LI>
-</OL>
-
-<H2 id="cond">CONDITIONAL STATEMENTS</H2>
-<H4 ONCLICK="ifexample()">Click Me to see "If" Example</H4>
-<H4 ONCLICK="ifelseexample()">Click Me to see "If else" Example</H4>
-<H4 ONCLICK="ElseIfexample()">Click Me to see "Else If" Example</H4>
-
-
-<SCRIPT LANGUAGE="JavaScript">
-<!--
-
-function ifexample(){
-var a=confirm(" Conditional if example if you press ok then true ");
-if(a==true)
-  {
-    alert("you pressed ok ...Right");
-  }
-}
-
-function ifelseexample(){
-var b=confirm(" Conditional if else example if you press ok then 'alert box saying OK' else 'alert box saying Cancel'");
-if(b==true)
-      alert("you pressed ok ...Right");
-else
-      alert("you pressed Cancel ...Right");
-}
-
-function ElseIfexample()
-{
-	var p=prompt("Rate your IQ in between 1 to 10");
-	if(p<5 && p>0)
-		alert("Not Good Must Improve");
-	else if(p==5)
-		alert("Good But Can do Better");
-	else if(p>5 && p<=8)
-		alert("Great work ..keep it up");
-	else if(p>8 && p<=10)
-		alert("Excellent...Go Home and sleep");
-	else 
-		alert("wrong input ..please try again");
-	}
-//-->
-</SCRIPT>
-
-<H2 id="loop">LOOP STATEMENTS</H2>
-<H4 ONCLICK="whileexample()">Click Me to see "while loop" Example</H4>
-<H4 ONCLICK="forexample()">Click Me to see "for loop" Example</H4>
-
-<SCRIPT LANGUAGE="JavaScript">
-<!--
-function whileexample()
-{	
-	var o;
-	var count=1;
-	while(o!=false)
-	{
-		o=confirm("Do you want to continue? "+count);
-		count=count+1;
-	}
-}
-
-function forexample()
-{	
-	
-	var i;
-	for(i=0;i<5;i++)
-	{
-		document.write(i+"</br>");
-	}
-	
-}
-
-//-->
-</SCRIPT>
-
-<H2>COMMENT STATEMENTS</H2>
-<SCRIPT LANGUAGE="JavaScript">
-<!--
-
-//THIS IS SINGLE LINE COMMENT
-
-/*
-THIS IS MULTI LINE COMMENT 
-*/
-//-->
-</SCRIPT>
 
 </BODY>
 </HTML>
+
+
+
+<!DOCTYPE html>
+<html>
+  <!-- Head Started -->
+  <head>
+    <!-- Title -->
+    <title>learntocode | JS Statements</title>
+    <!-- Linking Stylesheet -->
+    <link rel="stylesheet" href="/learntocode/assets/css/main.css">
+    <!-- Setting Favicon -->
+    <link rel="icon" type="image/png" href="/learntocode/favicon.png">
+  </head>
+  <!-- Head Ended -->
+  <body>
+    <!-- Container Started -->
+    <div class="container">
+      <!-- Header Started -->
+      <header>
+        <div class="wrapper clearfix">
+          <h1>
+            <a href="/learntocode/index.html">
+              <img src="/learntocode/assets/images/logo.png" alt="learntocode logo">
+              LearntoCode
+            </a>
+          </h1>        
+          <nav>
+            <ul>
+              <li>
+                <a href="lang/HTML/html.html">
+                  Learn Html
+                </a>
+              </li>
+              <li>
+                <a href="lang/CSS/css.html">
+                  Learn Css
+                </a>
+              </li>
+              <li>
+                <a href="lang/JAVASCRIPT/JavascriptPractice.php">Learn Javascript
+                </a>
+              </li>
+              <li>
+                <a href="lang/AJAX/ajaxhome.html">Learn Ajax
+                </a>
+              </li>
+              <li>
+                <a href="lang/FIXME">Learn Bootstrap
+                </a>
+              </li>
+              <li>
+                <a href="lang/PHP/phphome.php">Learn Php
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Header Ended -->
+      
+      <!-- Section Started-->
+      <section>
+        <h3>JS STATEMENTS</h3>   
+        
+        <p>Statements define what a script will do and how it will be done..</p>
+        <p>Statements can set variables equal to a value or it can be a function call</p>
+        <h4>CATEGORIES OF STATEMENTS</h4>
+        <p>In additional to standard statements there are also some DISTINCT statements</p>
+        <ol>
+          <li><a HREF="#cond">Conditional Statements</a></li>
+          <li><a HREF="#loop">Loop Statements</a></li>
+          <li><a HREF="">Object Manipulation Statements</a></li>
+          <li><a HREF="#comment">Comment Statements</a></li>
+          <li><a HREF="">Exception Handling Statements</a></li>
+        </OL>
+
+        <H2 id="cond">CONDITIONAL STATEMENTS</H2>
+        <H4 ONCLICK="ifexample()">Click Me to see "If" Example</H4>
+        <H4 ONCLICK="ifelseexample()">Click Me to see "If else" Example</H4>
+        <H4 ONCLICK="ElseIfexample()">Click Me to see "Else If" Example</H4>
+
+
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--
+
+        function ifexample(){
+        var a=confirm(" Conditional if example if you press ok then true ");
+        if(a==true)
+          {
+            alert("you pressed ok ...Right");
+          } 
+        }
+
+        function ifelseexample(){
+        var b=confirm(" Conditional if else example if you press ok then 'alert box saying OK' else 'alert box saying Cancel'");
+        if(b==true)
+              alert("you pressed ok ...Right");
+        else
+              alert("you pressed Cancel ...Right");
+        }
+
+        function ElseIfexample()
+        {
+          var p=prompt("Rate your IQ in between 1 to 10");
+          if(p<5 && p>0)
+            alert("Not Good Must Improve");
+          else if(p==5)
+            alert("Good But Can do Better");
+          else if(p>5 && p<=8)
+            alert("Great work ..keep it up");
+          else if(p>8 && p<=10)
+            alert("Excellent...Go Home and sleep");
+          else 
+            alert("wrong input ..please try again");
+          }
+        //-->
+        </SCRIPT>
+
+        <H2 id="loop">LOOP STATEMENTS</H2>
+        <H4 ONCLICK="whileexample()">Click Me to see "while loop" Example</H4>
+        <H4 ONCLICK="forexample()">Click Me to see "for loop" Example</H4>
+
+        <SCRIPT LANGUAGE="JavaScript">
+        <!--
+        function whileexample()
+        { 
+          var o;
+          var count=1;
+          while(o!=false)
+          {
+            o=confirm("Do you want to continue? "+count);
+            count=count+1;
+          }
+        }
+
+        function forexample()
+        { 
+          
+          var i;
+          for(i=0;i<5;i++)
+          {
+            document.write(i+"</br>");
+          }
+          
+        }
+
+        //-->
+        </script>
+
+        <h2 id="comment">COMMENT STATEMENTS</h2>
+        <p>
+          THIS IS SINGLE LINE COMMENT : //
+        </p>
+        <p>          
+          THIS IS MULTI LINE COMMENT  : /* */ 
+                  
+        </p>
+        <script language="JavaScript">
+        
+        //<!--
+        //THIS IS SINGLE LINE COMMENT
+
+        /*
+        THIS IS MULTI LINE COMMENT 
+        */
+        //-->
+        </script>
+
+      </section>
+      <!-- Section Ended-->
+          
+      <!-- Footer -->
+      <footer>
+        <div class="wrapper">
+          <p>
+            &copy;Copyright by Sunarj Technologies
+          </p>
+        </div>
+      </footer>
+      <!-- Footer Ended-->
+    </div>
+    <!-- Container Ended-->
+  </body>
+<!-- Body Ended -->
+</html>
