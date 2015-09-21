@@ -105,24 +105,36 @@
           <h5>Validate Data</h5>
           <form>
             <span id="showerror"></span>
-            Name: <input type="text" id="name" onblur="validatefield(this)"><br><span id="nameempty"><span>
-            Password: <input type="password" id="pwd" onblur="validatefield(this)"><br><span id="pwdempty"><span>
+            Name: <input type="text" id="name" onblur="validatefield(this)"><span id="nameempty"></span><br>
+            Password: <input type="password" id="pwd" onblur="validatefield(this)"><span id="pwdempty"></span><br>
             <input type="submit">
           </form>
 
           <script>
-            function validatefield(id1) {
-              var x = document.getElementById(id1);       
+            function validatefield(elem) {
+              var x = elem.id;
+              console.log(x);
+              console.log(elem);
 
-              if (x == null) {
-                console.log(x);
-                if (x.id == "name") {
+
+              if (elem.value == "" || elem.value == null) {                
+                if (x == "name") {
+                  console.log(x);
                   document.getElementById("nameempty").innerHTML = "Please Enter Field";
                 } else{
+                  console.log(x);
                   document.getElementById("pwdempty").innerHTML = "Please Enter Field";
-                };
-                 
-              };
+                }               
+              } else {
+                if (x == "name") {
+                  console.log(x);
+                  document.getElementById("nameempty").innerHTML = "";
+                } else{
+                  console.log(x);
+                  document.getElementById("pwdempty").innerHTML = "";
+                }
+              }
+
             }
           </script>
         </div>        
