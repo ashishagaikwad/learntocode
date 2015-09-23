@@ -1,19 +1,142 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
-<HTML>
-<HEAD>
-<TITLE> Javascript Objects </TITLE>
-<META NAME="Generator" CONTENT="EditPlus">
-<META NAME="Author" CONTENT="">
-<META NAME="Keywords" CONTENT="">
-<META NAME="Description" CONTENT="">
-</HEAD>
+<!DOCTYPE html>
+<html>
+  <!-- Head Started -->
+  <head>
+    <!-- Title -->
+    <title>learntocode | Home</title>
+    <!-- Linking Stylesheet -->
+    <link rel="stylesheet" href="/learntocode/assets/css/main.css">
+    <!-- Setting Favicon -->
+    <link rel="icon" type="image/png" href="/learntocode/favicon.png">
+  </head>
+  <!-- Head Ended -->
+  <body>
+    <!-- Container Started -->
+    <div class="container">
+      <!-- Header Started -->
+      <header>
+        <div class="wrapper clearfix">
+          <h1>
+            <a href="/learntocode/index.html">
+              <img src="/learntocode/assets/images/logo.png" alt="learntocode logo">
+              LearntoCode
+            </a>
+          </h1>        
+          <nav>
+            <ul>
+              <li>
+                <a href="../HTML/html.html">
+                  Learn Html
+                </a>
+              </li>
+              <li>
+                <a href="../CSS/css.html">
+                  Learn Css
+                </a>
+              </li>
+              <li>
+                <a href="../JAVASCRIPT/JavascriptPractice.php">Learn Javascript
+                </a>
+              </li>
+              <li>
+                <a href="../AJAX/ajaxhome.html">Learn Ajax
+                </a>
+              </li>
+              <li>
+                <a href="../FIXME">Learn Bootstrap
+                </a>
+              </li>
+              <li>
+                <a href="../PHP/phphome.php">Learn Php
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <!-- Header Ended -->
+      
+      <!-- Section Started-->
+      <section>
+        <h3>
+          JS Objects
+        </h3>
+        <h4>
+          What is an Object?
+        </h4>
+        <p>
+          An object is an unordered list of primitive data types (and sometimes reference data types) that is stored as a series of name-value pairs. Each item in the list is called a property (functions are called methods).          
+        </p>
 
-<BODY>
-<PRE>
-FOLLOWING ARE SOME OF THE OBJECTS IN JAVASCRIPT
-<A HREF="DateObject.html">DATE OBJECT</A>
+        <h4>
+          Reference Data Type and Primitive Data Types
+        </h4>
+        <p>
+          One of the main differences between reference data type and primitive data types is reference data type’s value is stored as a reference, it is not stored directly on the variable, as a value, as the primitive data types are. For example:
+        </p>
+        <script>
+          var person = "kobe";
+          var anotherperson = person;//anotherperson = value of the person
+          person = "ashish";//value of person changed
+          console.log(anotherperson);//kobe
+          console.log(person);//ashish
+        </script>
+        <p>
+          It is worth noting that even though we changed person to “Bryant,” the anotherPerson variable still retains the value that person had.
+        </p>
+        <p>
+          Compare the primitive data saved-as-value demonstrated above with the save-as-reference for objects:
+        </p>
+        <script>
+          var person1 = {name: "ashish"};
+          var anotherPerson1 = person1;
+          person1.name = "pratiksha";
+          console.log(anotherPerson1.name);//bryant​
+          console.log(person1.name); // Bryant
+        </script>
+        <p>
+          In this example, we copied the person object to anotherPerson, but because the value in person was stored as a reference and not an actual value, when we changed the person.name property to “Bryant” the anotherPerson reflected the change because it never stored an actual copy of it’s own value of the person’s properties, it only had a reference to it.
+        </p>
 
 
-</PRE>
-</BODY>
-</HTML>
+
+        
+        <h3>Problems and their Solutions</h3>
+        <p>
+          Property names can be a string or a number, but if the property name is a number, it has to be accessed with the bracket notation.
+        </p>
+        <script>
+          var ageGroup = {20: "Children",30: "Adult", 100:"Very Old"};
+          //console.log(ageGroup.30); // This will throw an error​
+
+          //This is how you will access the value of the property 30, to get value "Children"​​          
+          console.log(ageGroup["30"]); // Children​
+        </script>
+
+
+        <h3>
+          Following are some of the pre defined objects in Javascript
+        </h3>
+        <ul>
+          <li>
+            <a href="DateObject.html">Date Object</a>
+          </li>
+        </ul>
+
+      </section>
+      <!-- Section Ended-->
+          
+      <!-- Footer -->
+      <footer>
+        <div class="wrapper">
+          <p>
+            &copy;Copyright by Sunarj Technologies
+          </p>
+        </div>
+      </footer>
+      <!-- Footer Ended-->
+    </div>
+    <!-- Container Ended-->
+  </body>
+<!-- Body Ended -->
+</html>
